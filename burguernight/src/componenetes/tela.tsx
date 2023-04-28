@@ -5,10 +5,13 @@ type Props = {
     titulo: string;
 }
 
-function tela(props:Props){
+function Tela(props:Props){
     return(
         <div>
             {props.children}
         </div>
     );
 }
+
+
+export default Tela;
