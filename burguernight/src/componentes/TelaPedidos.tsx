@@ -1,8 +1,8 @@
-import Tela from "./tela";
+import Tela from "../componentes/Tela";
 
 function TelaPedido() {
     return (
-        <Tela titulo="Resumo do seu pedido">
+        <Tela>
             <div>Resumo</div>
             <p>finalizar...</p>
         </Tela>
