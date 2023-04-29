@@ -7,3 +7,5 @@ function TelaPrincipal(){
         </Tela>
     );
 }
+
+export default TelaPrincipal;
