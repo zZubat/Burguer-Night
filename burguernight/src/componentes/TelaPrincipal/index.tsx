@@ -4,6 +4,7 @@ function TelaPrincipal(){
     return(
         <Tela>
             <button><img src="../../Aseets/icons8-shopping-cart-24.png" alt="" /></button>
+            <div>Peixonauta</div>
         </Tela>
     );
 }
