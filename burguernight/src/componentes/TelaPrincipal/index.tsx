@@ -1,9 +1,10 @@
 import Tela from '../Tela'
+import Navegacao from './Navegação/index';
 
-function TelaPrincipal(){
-    return(
+function TelaPrincipal() {
+    return (
         <Tela>
-            <button><img src="../../Aseets/icons8-shopping-cart-24.png" alt="" /></button>
+            <Navegacao/>
         </Tela>
     );
 }
