@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
-import Adicionais from '../Adicionais/Adicionais';
+import Adicional from '../Adicionais/Adicional';
 import Tela from '../Tela'
 
 
 function TelaConfirmacaoDoPedido(){    
     return(
-        <Tela>
+        <Tela> 
             <div>
-                <h1>Confirmação Do Pedido.</h1>
-                <h2>Especial da Noite</h2>  
-                <Adicionais/>          
+            <h2>Especial da Noite</h2> 
+                <Adicional></Adicional>
             </div>
         </Tela>
     );
 }
-
   
 export default TelaConfirmacaoDoPedido;

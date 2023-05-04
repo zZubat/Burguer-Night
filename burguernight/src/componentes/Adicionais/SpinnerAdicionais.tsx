@@ -11,10 +11,9 @@ type NumeroProps = {
 
 function Adicionais() {
     const [valor, setValor] = useState(0) 
-  
-    
+
     function adicionar() {
-      if (valor < 3) {
+      if (valor < 4) {
         setValor(valor + 1)
       }
     }
