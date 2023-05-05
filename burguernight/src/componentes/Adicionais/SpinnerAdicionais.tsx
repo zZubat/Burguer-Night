@@ -13,7 +13,7 @@ function Adicionais() {
     const [valor, setValor] = useState(0) 
 
     function adicionar() {
-      if (valor < 4) {
+      if (valor < 1) {
         setValor(valor + 1)
       }
     }
