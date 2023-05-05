@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import styles from './index.module.css'
 
 type Props = {
     children: ReactNode;
@@ -7,7 +8,7 @@ type Props = {
 
 function Tela(props:Props){
     return(
-        <div>
+        <div className={styles.Tela}>
             {props.children}
         </div>
     );

@@ -3,8 +3,9 @@ import Tela from "../Tela";
 function TelaPedido() {
     return (
         <Tela>
-            <div>Resumo</div>
-            <p>finalizar...</p>
+            <div>Promoções</div>
+            <p>categorias</p>
+            <p>Especial da noite</p>
         </Tela>
     );
 }
