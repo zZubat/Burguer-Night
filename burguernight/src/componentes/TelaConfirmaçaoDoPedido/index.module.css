@@ -1,0 +1,35 @@
+
+.body {
+
+    background-color: rgba(247, 224, 96, 0.989);
+    color: black;
+
+}
+
+
+.card {
+
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+
+}
+
+
+.FotoLanche {
+
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 140px;
+
+}
+
+
+.nomepreco {
+
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    height: 160px;
+}
