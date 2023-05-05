@@ -2,11 +2,11 @@ function Navegacao(){
     return(
         <span>
             <nav>
-                <link rel="stylesheet" href="" >Burguer</link>
-                <link rel="stylesheet" href="" >Acompnhamento</link>
-                <link rel="stylesheet" href="" >Bebidas</link>
-                <link rel="stylesheet" href="" >Sobremesas</link>
-                <link rel="stylesheet" href="" >Porções</link>
+                <a href="#Burguer" >Burguer</a>
+                <a href="#Bebidas" >Bebidas</a>
+                <a href="#Acompanhamentos" >Acompanhamentos</a>
+                <a href="#Porções" >Porções</a>
+                <a href="#Sobremesas" >Sobremesas</a>
             </nav>
         </span>
     );
