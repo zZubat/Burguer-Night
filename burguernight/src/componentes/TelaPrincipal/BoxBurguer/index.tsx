@@ -1,22 +1,22 @@
 type Props = {
    // imagem: string;
     nome: string;
-    ingredientes: string;
+    ingredientes?: string;
     descricao: string;
     preco: number;
 }
 
-function Burguer(props: Props){
+function BoxBurguer(props: Props){
     return(
         <div>
-            <h1>{props.nome}</h1>
-            <h2>{props.ingredientes}</h2>
-            <h4>{props.descricao}</h4>
-            <h1>{props.preco}</h1>
+            <h3>{props.nome}</h3>
+            <span>{props.ingredientes}</span>
+            <span>{props.descricao}</span>
+            <span>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props.preco)}</span>
         </div>
         
     )
     
 }
 
-export default Burguer;
+export default BoxBurguer;
