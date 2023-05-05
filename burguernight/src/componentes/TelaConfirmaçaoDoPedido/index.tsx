@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Adicional from '../Adicionais/Adicional';
 import Tela from '../Tela'
-import HamburguerAustraliano from '../imgs/HamburguerAustraliano.png'
 import styles from './index.module.css'
 
 
@@ -13,7 +12,7 @@ function TelaConfirmacaoDoPedido(){
                 <div className={styles.card}>
 
                     <div className={styles.FotoLanche}>
-                        <img src={HamburguerAustraliano}/>
+                        <img src='../../Aseets/10552951.jpg'/>
                     </div>
 
                     <div className={styles.nomepreco}>   
