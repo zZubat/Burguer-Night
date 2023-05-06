@@ -1,28 +1,30 @@
 
-.body {
 
+body {
+    background-image: url(../../Aseets/backgroundConfirmarPedido.jpg);
     background-color: rgba(247, 224, 96, 0.989);
     color: black;
-
 }
 
+.iconback {
+    display: flex;
+    padding: 7px;
+    width: 50px;
+    height: 40px;
+}
 
 .card {
-
     display: flex;
     flex-direction: row;
     padding: 15px;
-
 }
 
 
 .FotoLanche {
-
     display: flex;
     flex-direction: column;
     width: 150px;
     height: 140px;
-
 }
 
 

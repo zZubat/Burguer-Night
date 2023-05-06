@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/pedidos" element={<TelaPedido />} />
         <Route path="/" element={<TelaPrincipal/>} />
-        <Route path="/ConfirmacãoDoPedido" element={<TelaConfirmacaoDoPedido/>} />
+        <Route path="/ConfirmacaoDoPedido" element={<TelaConfirmacaoDoPedido/>} />
       </Routes>
     </div>
   );
