@@ -2,8 +2,8 @@ import Tela from '../Tela'
 import Navegacao from './Navegação/index';
 import BoxBurguer from './BoxBurguer/index';
 import { useEffect, useState } from 'react';
-import BurguerService from '../services/BurguerServices';
-import Burguer from '../models/Burguer';
+import BurguerService from '../../services/BurguerServices';
+import Burguer from '../../models/Burguer';
 
 
 function TelaPrincipal() {
