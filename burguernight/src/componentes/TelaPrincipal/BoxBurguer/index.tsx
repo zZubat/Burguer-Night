@@ -6,7 +6,7 @@ type Props = {
     preco: number;
 }
 
-function BoxBurguer(props: Props){
+function BoxProduto(props: Props){
     return(
         <div>
             <h3>{props.nome}</h3>
@@ -19,4 +19,4 @@ function BoxBurguer(props: Props){
     
 }
 
-export default BoxBurguer;
+export default BoxProduto;
