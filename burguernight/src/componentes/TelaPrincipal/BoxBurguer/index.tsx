@@ -1,3 +1,5 @@
+import styles from './index.module.css'
+
 type Props = {
    // imagem: string;
     nome: string;
@@ -6,9 +8,9 @@ type Props = {
     preco: number;
 }
 
-function BoxBurguer(props: Props){
+function BoxProduto(props: Props){
     return(
-        <div>
+        <div className= {styles.produto}>
             <h3>{props.nome}</h3>
             <span>{props.ingredientes}</span>
             <span>{props.descricao}</span>
@@ -19,4 +21,4 @@ function BoxBurguer(props: Props){
     
 }
 
-export default BoxBurguer;
+export default BoxProduto;

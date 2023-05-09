@@ -1,0 +1,10 @@
+.produto {
+    box-shadow: 7px 10px 14px 1px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: 7px 10px 14px 1px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 7px 10px 14px 1px rgba(0, 0, 0, 0.62);
+    margin-bottom: 15px;
+    border-radius: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    color: white;
+}

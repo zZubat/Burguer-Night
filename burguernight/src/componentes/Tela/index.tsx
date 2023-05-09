@@ -2,6 +2,7 @@ import { ReactNode } from "react"
 import styles from './index.module.css'
 import imagem from '../../Aseets/backgroundConfirmarPedido.png'
 
+
 type Props = {
     children: ReactNode;
     //titulo: string;
