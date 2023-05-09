@@ -6,31 +6,31 @@ function Adicional() {
 
     return(
         <div className={styles.Adicional}>
-        <section className={styles.border}>  
+        <section className={styles.border1}>  
          <h3 className={styles.titulo}>Tipos de Pães</h3>
           <div className={styles.esquerda}>
-           <h6>Pão Australino</h6>  
-           <h6>Pão de Brioche</h6>
-           <h6>Pão de 3 Queijos</h6>
-           <h6>Pão Tradicional</h6>
+           <p>Pão Australino</p>  
+           <p>Pão de Brioche</p>
+           <p>Pão de 3 Queijos</p>
+           <p>Pão Tradicional</p>
           </div> 
         </section>   
         
-        <section className={styles.border}>       
+        <section className={styles.border2}>       
          <h3 className={styles.titulo}>Ponto da Carne</h3>
           <div className={styles.esquerda}>
-           <h6>Ao Ponto</h6>
-           <h6>Bem Passado</h6>
-           <h6>Mal Passado</h6>
+           <p>Ao Ponto</p>
+           <p>Bem Passado</p>
+           <p>Mal Passado</p>
           </div>
         </section>
 
-        <section className={styles.border}>
+        <section className={styles.border3}>
          <h3 className={styles.titulo}>Porções</h3>
           <div className={styles.esquerda}>
-           <h6>Batata</h6>
-           <h6>Batata C/ Cheddar</h6>
-           <h6>Batata C/ Cheddar e Bacon</h6>
+           <p>Batata</p>
+           <p>Batata C/ Cheddar</p>
+           <p>Batata C/ Cheddar e Bacon</p>
           </div>
         </section>
         </div>

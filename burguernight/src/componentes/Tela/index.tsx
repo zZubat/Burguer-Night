@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 import styles from './index.module.css'
+import imagem from '../../Aseets/backgroundConfirmarPedido.png'
 
 type Props = {
     children: ReactNode;
@@ -8,8 +9,11 @@ type Props = {
 
 function Tela(props:Props){
     return(
-        <div className={styles.Tela}>
+        <div>
+            <img className={styles.imagem} src={imagem}/>
+            <div className={styles.tela}>
             {props.children}
+            </div>
         </div>
     );
 }
