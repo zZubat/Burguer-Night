@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
 import styles from './index.module.css'
 
+
 type Props = {
     children: ReactNode;
     //titulo: string;
