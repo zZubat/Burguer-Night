@@ -2,17 +2,19 @@ import React, { useState } from 'react';
 import Adicional from '../Adicionais/Adicional';
 import Tela from '../Tela'
 import styles from './index.module.css'
+import HamburguerAus from '../../Aseets/HamburguerAus.jpg';
+import iconBack from '../../Aseets/iconBack.png'
+import backgroundImage from '../../Aseets/backgroundConfirmarPedido.png'
 
-
-
-function TelaConfirmacaoDoPedido(){    
+function Pedido(){    
     return(
-        <Tela> 
+        <Tela>
             <body className={styles.body}>
+             <a className={styles.iconback} href=""><img src={iconBack}/></a>
                 <div className={styles.card}>
 
-                    <div className={styles.FotoLanche}>
-                        <img src='../../Aseets/10552951.jpg'/>
+                    <div>
+                        <img className={styles.FotoLanche} src={HamburguerAus} />x
                     </div>
 
                     <div className={styles.nomepreco}>   
@@ -27,4 +29,4 @@ function TelaConfirmacaoDoPedido(){
     );
 }
  
-export default TelaConfirmacaoDoPedido;
+export default Pedido;

@@ -1,33 +1,36 @@
 
-.body {
 
-    background-color: rgba(247, 224, 96, 0.989);
+body {
     color: black;
-
 }
 
+.iconback {
+    display: flex;
+    padding: 7px;
+    width: 50px;
+    height: 40px;
+}
 
 .card {
-
     display: flex;
     flex-direction: row;
     padding: 15px;
-
 }
 
 
 .FotoLanche {
-
     display: flex;
     flex-direction: column;
+    margin-left: 5px;
     width: 150px;
     height: 140px;
-
+    border-radius: 10px;
 }
 
 
 .nomepreco {
-
+    color: rgba(242, 240, 240, 0.886);
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
     width: 170px;
