@@ -57,7 +57,7 @@ function TelaPrincipal() {
                 {(carregando === true) && (
                     <p>Carregando...</p>
                 )}
-                {Lista('burguer')}
+                {Lista('bebida')}
             </section>
 
             <section id="Porções">
@@ -65,7 +65,7 @@ function TelaPrincipal() {
                 {(carregando === true) && (
                     <p>Carregando...</p>
                 )}
-                {Lista('burguer')}
+                {Lista('porcao')}
             </section>
 
             <section id="Sobremesas">
@@ -73,7 +73,7 @@ function TelaPrincipal() {
                 {(carregando === true) && (
                     <p>Carregando...</p>
                 )}
-                {Lista('burguer')}
+                {Lista('sobremesa')}
             </section>
         </Tela>
     );
