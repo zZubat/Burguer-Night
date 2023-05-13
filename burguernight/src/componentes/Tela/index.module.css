@@ -2,10 +2,8 @@
     scroll-behavior: smooth;
     overflow: auto;
     height: 100%;
-    background-image: url('../../Aseets/backgroundConfirmarPedido.png');
-    background-attachment: fixed;
 }
 
 .conteudo{
-    padding: 20px;
+    padding: 30px;
 }
