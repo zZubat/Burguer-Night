@@ -1,0 +1,12 @@
+.botaoderadio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 3px;
+}
+
+.label {
+    flex-grow: 1;
+    text-align: left;
+}
