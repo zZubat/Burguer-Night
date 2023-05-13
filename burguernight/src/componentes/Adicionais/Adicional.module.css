@@ -1,55 +1,42 @@
-
-
 .Adicional {
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     align-items: center;
+    background-color: aqua;
 }
-
 .titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .esquerda {
-    padding: 5px;
-    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px;
 }
-
-.border1 {
-    background-color: rgba(34, 33, 33, 0.551);
-    color: white;
-    border-radius: 7%;
-    width: 330px;
-    height: 250px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    opacity: 80%;
-    background: linear-gradient(#b67505c8, rgb(27, 19, 4));
+.esquerda p {
+    margin: 1;
 }
 
 .border2 {
     background-color: rgba(34, 33, 33, 0.551);
     color: white;
     border-radius: 7%;
-    width: 330px;
-    height: 210px;
+    width: 350px;
     margin-top: 10px;
     margin-bottom: 10px;
     opacity: 80%;
-    background: linear-gradient(#b67505c8, rgb(27, 19, 4));
+    background: linear-gradient(#43341bc8, rgb(27, 19, 4));
 }
-
 .border3 {
     background-color: rgba(34, 33, 33, 0.551);
     color: white;
     border-radius: 7%;
-    width: 330px;
-    height: 220px;
+    width: 350px;
     margin-top: 10px;
     margin-bottom: 10px;
     opacity: 80%;
-    background: linear-gradient(#b67505c8, rgb(27, 19, 4));
+    background: linear-gradient(#43341bc8, rgb(27, 19, 4));
 }

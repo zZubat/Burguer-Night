@@ -1,18 +1,19 @@
 import { ReactNode } from "react"
 import styles from './index.module.css'
-import imagem from '../../Aseets/backgroundConfirmarPedido.png'
 
 type Props = {
     children: ReactNode;
-    //titulo: string;
+    barraTopo?: ReactNode;
 }
 
 function Tela(props:Props){
     return(
-        <div>
-            <img className={styles.imagem} src={imagem}/>
-            <div className={styles.tela}>
-            {props.children}
+        <div className={styles.tela}>
+            <div>
+                {props.barraTopo}
+            </div>
+            <div className={styles.conteudo}>
+                {props.children}
             </div>
         </div>
     );
