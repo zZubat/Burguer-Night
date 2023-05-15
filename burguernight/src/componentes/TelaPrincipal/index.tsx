@@ -1,3 +1,4 @@
+import Carrinho from './BotãoCarrinho';
 import Tela from '../Tela'
 import Navegacao from './Navegação/index';
 import BoxProduto from './BoxBurguer/index';
@@ -43,6 +44,7 @@ function TelaPrincipal() {
 
     return (
         <Tela>
+            <Carrinho/>
             <Navegacao/>
             <section id="Burguer">
                 <h1>Burguers</h1>
