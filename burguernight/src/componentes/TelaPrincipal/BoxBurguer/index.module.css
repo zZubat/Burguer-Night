@@ -7,4 +7,10 @@
     background: rgba(0, 0, 0, 0.5);
     opacity: 0.9;
     color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.preco {
+    padding-top: 15px;
 }

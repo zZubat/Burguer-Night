@@ -1,0 +1,10 @@
+.Navegacao a{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    height: 50px ;
+    padding-top: 20px;
+
+ }
