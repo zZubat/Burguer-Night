@@ -14,7 +14,7 @@ function BoxProduto(props: Props){
             <h3>{props.nome}</h3>
             <span>{props.ingredientes}</span>
             <span>{props.descricao}</span>
-            <span>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props.preco)}</span>
+            <span className={styles.preco} >{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props.preco)}</span>
         </div>
         
     )
