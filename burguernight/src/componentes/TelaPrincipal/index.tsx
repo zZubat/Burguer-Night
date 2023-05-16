@@ -5,6 +5,7 @@ import BoxProduto from './BoxBurguer/index';
 import { useEffect, useState } from 'react';
 import ProdutoService from '../services/ProdutoServices';
 import Produto from '../models/Produto';
+import Caixa from '../Adicionais/Caixa';
 
 
 function TelaPrincipal() {
@@ -47,35 +48,39 @@ function TelaPrincipal() {
             <Carrinho/>
             <Navegacao/>
             <section id="Burguer">
-                <h1>Burguers</h1>
+                <Caixa titulo={"Burguers"}>
                 {(carregando === true) && (
                     <p>Carregando...</p>
                 )}
                 {Lista('burguer')}
+                </Caixa>
             </section>
 
             <section id="Bebidas">
-                <h1>Bebidas</h1>
+                <Caixa titulo={"Bebidas"}>
                 {(carregando === true) && (
                     <p>Carregando...</p>
                 )}
                 {Lista('bebida')}
+                </Caixa>
             </section>
 
             <section id="Porções">
-                <h1>Porções</h1>
+                <Caixa titulo={"Porções"}>
                 {(carregando === true) && (
                     <p>Carregando...</p>
                 )}
                 {Lista('porcao')}
+                </Caixa>
             </section>
 
             <section id="Sobremesas">
-                <h1>Sobremesas</h1>
+                <Caixa titulo={"Sobremesas"}>
                 {(carregando === true) && (
                     <p>Carregando...</p>
                 )}
                 {Lista('sobremesa')}
+                </Caixa>
             </section>
         </Tela>
     );
