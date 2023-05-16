@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
 import styles from './index.module.css'
 
 function Carrinho (){
     return(
-        
-        <a href='#ConfirmaPedido' className={styles.botaoCarrinho}>carrinho</a>
+        <Link to={"Pagamento"}>
+            <a className={styles.botaoCarrinho}/>
+        </Link>
     );
 }
 
