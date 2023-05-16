@@ -5,6 +5,7 @@ import Caixa from '../Adicionais/Caixa';
 import GrupoDeRadio from '../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import { Link } from 'react-router-dom';
 import {CaretLeft} from '@phosphor-icons/react';
+import BotaoFazerPedido from '../Adicionais/BotaoFazerPedido';
 
 function Pedido(){   
     
@@ -53,6 +54,7 @@ function Pedido(){
                         <p>Batata</p>
                     </Caixa>
                 </section>
+                <BotaoFazerPedido/>
             </Tela>
         </div>
     );
