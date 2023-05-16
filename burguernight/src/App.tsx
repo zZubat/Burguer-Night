@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import TelaPrincipal from './componentes/TelaPrincipal/index';
-import Pedido from './componentes/Pedido';
+import Pedido from './componentes/TelaPedido';
 
 function App() {
   return (
