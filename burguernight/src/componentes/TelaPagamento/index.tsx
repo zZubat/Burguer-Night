@@ -5,22 +5,23 @@ import styles from './index.module.css'
 
 function Pagamento() {
     return (
-        <Tela barraTopo={
-            <Link to="/">
-                <a className={styles.iconback}>
+            <Tela  barraTopo={
+                <div className={styles.topo}>
+                    <Link to="/">
+                        <a className={styles.iconback}>
+                            <CaretLeft color="#fff" size={42} />
+                        </a>
+                    </Link>
                     <div>
-                        <CaretLeft color="#000" size={42} />
+                        <h3 className={styles.texttopo}>FINALIZAR PAGAMENTO</h3>
                     </div>
-                    <div>
-                        <h3>Finalizar Pedido</h3>
-                    </div>  
-                 </a>
-            </Link>
-        }>
-        <div>
-            <h3>Teste</h3>
-        </div>       
-        </Tela>
+                </div>
+            }>
+
+                <div className={styles.cardpedidos}>
+                    <h3>Pedidos</h3>
+                </div>       
+            </Tela>
     )
 }
 
