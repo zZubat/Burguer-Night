@@ -20,7 +20,12 @@ function Pagamento() {
 
                 <div className={styles.cardpedidos}>
                     <h3>Pedidos</h3>
-                </div>       
+                </div>  
+                <div>
+                  <BoxCupons/>
+                  <BoxTotal subtotal={100} desconto={60} total={40}/>
+                  <BoxFormasdePagamento />
+                </div>  
             </Tela>
     )
 }
