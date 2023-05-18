@@ -1,11 +1,28 @@
-.card {
-    background-color: aqua;
+.imagemdefundo{ 
+    background-image: url('../../Aseets/backgroundConfirmarPedido.png');
+    background-attachment: fixed;
 }
 
+.topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 85px;
+}
 .iconback {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    width: 50px;
+    padding-top: 20px;
+    width: 70px;
+}
+.texttopo {
+    color: white;
+    margin-top: 10px;
+}
+.cardpedidos{
+    background-color: rgb(41, 35, 35);
+    color: white;
+    width: 350px;
+    height: 250px;
+    padding-top: 100px;
 }

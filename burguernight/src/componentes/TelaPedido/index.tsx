@@ -23,7 +23,6 @@ function Pedido(){
     ];
 
     return(
-        <div className={styles.imagemdefundo}>
             <Tela barraTopo={
                 <Link to="/">
                     <a className={styles.iconback}>
@@ -56,7 +55,6 @@ function Pedido(){
                 </section>
                 <BotaoFazerPedido/>
             </Tela>
-        </div>
     );
 }
  
