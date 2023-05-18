@@ -16,8 +16,8 @@ function BoxFormasdePagamento () {
                     <h1>Formas de pagamento</h1>
                     <h3>Dinheiro - Cartão - Pix</h3>
                 </div>
-                    <button className={styles.botao}>Alterar</button>
-                </div>
+                <button className={styles.botao}>Alterar</button>
+            </div>
                 <div className={styles.BoxFormasdePagamento}>
                     <img className={styles.cpf}  src = {imgCpf}/>
                     <div className={styles.BoxDocumento}>
@@ -25,8 +25,8 @@ function BoxFormasdePagamento () {
                         <h3 >Digite um documento válido</h3>
                     </div>
                     <button className={styles.botao}>Alterar</button>
-                    </div>
-                    <button className={styles.botaofinalizar}>Finalizar Pagamento</button>
+                </div>
+                <button className={styles.botaofinalizar}>Finalizar Pagamento</button>
         </div>
     )
 

@@ -2,6 +2,10 @@ import { CaretLeft } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 import Tela from '../Tela'
 import styles from './index.module.css'
+import BoxCupons from '../Adicionais/BoxCupom/BoxCupom';
+import BoxTotal from '../Adicionais/BoxTotal/BoxTotal';
+import BoxFormasdePagamento from '../Adicionais/BoxFormasdePagamento/BoxFormasdePagamento';
+
 
 function Pagamento() {
     return (
@@ -22,10 +26,10 @@ function Pagamento() {
                     <h3>Pedidos</h3>
                 </div>  
                 <div>
-                  <BoxCupons/>
-                  <BoxTotal subtotal={100} desconto={60} total={40}/>
-                  <BoxFormasdePagamento />
-                </div>  
+                    <BoxCupons/>
+                    <BoxTotal subtotal={100} desconto={60} total={40}/>
+                    <BoxFormasdePagamento/>  
+                </div>
             </Tela>
     )
 }

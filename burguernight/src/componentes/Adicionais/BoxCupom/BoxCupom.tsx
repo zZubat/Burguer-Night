@@ -1,4 +1,3 @@
-import Tela from "../Tela";
 import styles from "./index.module.css"
 
 
