@@ -29,9 +29,7 @@ function BoxTotal (props: Props) {
                         <th>Total</th>
                         <td className={styles.td}>R$ {props.total} </td>
                     </tr>
-         
          </table>
-        
         </div>
     )
 }
