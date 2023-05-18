@@ -1,4 +1,4 @@
-import Tela from "../componentes/Tela";
+import Tela from "../Tela";
 
 function TelaPedido() {
     return (

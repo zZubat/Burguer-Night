@@ -1,0 +1,42 @@
+.boxcupons {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    padding-left: 64px;
+
+    background-image: url('./imagens/icone.png');
+    background-repeat: no-repeat;
+    background-position: 20px center;
+
+
+    display: flex;
+    flex-direction: row;
+}
+
+.boxcupons .titulos {
+    flex-grow: 1;
+    font-family: Amiko;
+}
+
+.boxcupons .titulos h1 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+}
+
+.boxcupons .titulos h2 {
+    font-size: 8px;
+    font-weight: 400;
+    opacity: 0.5;
+    margin: 0;
+    text-align: left;
+}
+
+.botao {
+    color: red;
+    border: 0;
+    background-color: transparent;
+}
