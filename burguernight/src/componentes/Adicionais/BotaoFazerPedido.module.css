@@ -1,0 +1,11 @@
+.borda {
+    background-color: red;
+    color: white;
+    width: 200px;  
+    margin-top: 40px;
+    
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+}

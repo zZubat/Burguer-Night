@@ -1,0 +1,7 @@
+.Navegacao a{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: white;
+
+ }

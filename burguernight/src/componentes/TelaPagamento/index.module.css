@@ -1,0 +1,11 @@
+.card {
+    background-color: aqua;
+}
+
+.iconback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    width: 50px;
+}
