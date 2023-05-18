@@ -1,0 +1,29 @@
+
+.boxtotal {
+    display: flex;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: black;
+    opacity:0.5;
+}
+
+.titulos  {
+    text-align: left;
+    color: white;
+    flex-grow: 1;
+}
+
+.th {
+    opacity: 0.5;
+    text-align: left;
+}
+
+.td {
+    text-align: right;
+    opacity: 0.5;
+}
+
+.total td {
+    opacity: 1;
+}
+

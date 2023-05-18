@@ -18,7 +18,9 @@ function Pagamento() {
             </Link>
         }>
         <div>
-            <h3>Teste</h3>
+            <BoxCupons/>
+            <BoxTotal subtotal={100} desconto={60} total={40}/>
+            <BoxFormasdePagamento />
         </div>       
         </Tela>
     )
