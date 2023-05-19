@@ -23,14 +23,7 @@ function Pedido(){
     ];
 
     return(
-        <div className={styles.imagemdefundo}>
-            <Tela barraTopo={
-                <Link to="/">
-                    <a className={styles.iconback}>
-                        <CaretLeft color="#fff" size={42} />
-                     </a>
-                </Link>
-            }>
+        <div>
                 <div className={styles.card}>
                     <div>
                         <img className={styles.FotoLanche} src={FotoLanche} />
@@ -55,7 +48,6 @@ function Pedido(){
                     </Caixa>
                 </section>
                 <BotaoFazerPedido/>
-            </Tela>
         </div>
     );
 }

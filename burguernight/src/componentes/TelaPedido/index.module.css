@@ -1,7 +1,3 @@
-.imagemdefundo{
-    background-image: url('../../Aseets/backgroundConfirmarPedido.png');
-    background-attachment: fixed;
-}
 
 .iconback {
     display: flex;
