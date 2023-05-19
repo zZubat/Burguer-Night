@@ -1,13 +1,13 @@
-import Tela from '../Tela'
+import Tela from '../../Tela'
 import styles from './index.module.css'
-import FotoLanche from '../../Aseets/HamburguerAus.jpg';
-import Caixa from '../Adicionais/Caixa';
-import GrupoDeRadio from '../Adicionais/GrupoDeRadio/GrupoDeRadio';
+import FotoLanche from '../../../Aseets/HamburguerAus.jpg';
+import Caixa from '../../Adicionais/Caixa';
+import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import { Link } from 'react-router-dom';
 import {CaretLeft} from '@phosphor-icons/react';
-import BotaoFazerPedido from '../Adicionais/BotaoFazerPedido';
+import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido';
 
-function Pedido(){   
+function PedidoHamburguer(){   
     
     const labelsTipoPao = [
         "Pão Australiano",
@@ -47,15 +47,10 @@ function Pedido(){
                     <Caixa titulo={"Ponto da Carne"}>
                         <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
                     </Caixa>
-                    <Caixa titulo={"Porções"}>
-                        <p>Batata C/ Cheddar e Bacon</p>
-                        <p>Batata C/ Cheddar</p>
-                        <p>Batata</p>
-                    </Caixa>
                 </section>
                 <BotaoFazerPedido/>
             </Tela>
     );
 }
  
-export default Pedido;
+export default PedidoHamburguer;
