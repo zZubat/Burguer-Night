@@ -6,7 +6,7 @@ import imgCpf from "./imagens/LOGO DOCUMENTO.png"
 
 function BoxFormasdePagamento () {
     return (
-        <div>
+        <div className={styles.borda}>
             <div className={styles.BoxFormasdePagamento}>
                 <div className={styles.logo}>
                     <img src = {imgElo}/>

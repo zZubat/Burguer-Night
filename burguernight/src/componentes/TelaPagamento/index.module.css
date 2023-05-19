@@ -20,10 +20,58 @@
     margin-top: 10px;
 }
 .cardpedidos{
-    background-color: rgb(41, 35, 35);
+    margin-bottom: 50px;
+}
+.titulo{
+    width: 130px;
+}
+.cardpedido1{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(#43341bc8, rgb(27, 19, 4));
+    background-color: rgba(0, 0, 0, 0.776);
     color: white;
     width: 350px;
-    height: 250px;
-    padding-top: 100px;
-    margin-bottom: 30px;
+    height: 140px;
+    padding-top: 10px;
+
+    border-radius: 7%;
+    margin-bottom: 15px;
+}
+.FotoLanche1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+}
+.nomepreco1{
+    margin-left: 30px;
+    padding: 2px;
+}
+.cardpedido2{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(#43341bc8, rgb(27, 19, 4));
+    background-color: rgba(0, 0, 0, 0.776);
+    color: white;
+    width: 350px;
+    height: 150px;
+    padding-top: 10px;
+
+    border-radius: 7%;
+    margin-bottom: 15px;
+}
+.FotoLanche2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    width: 150px;
+    height: 140px;
+    border-radius: 10px;
+}
+.nomepreco2{
+    margin-left: 30px;
+    padding: 2px;
 }
