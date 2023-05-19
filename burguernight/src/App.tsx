@@ -2,15 +2,18 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import TelaPrincipal from './componentes/TelaPrincipal/index';
-import Pedido from './componentes/TelaPedido';
+import PedidoHamburguer from './componentes/TelaPedido/Hamburguer';
+import PedidoBebidas from './componentes/TelaPedido/Bebidas';
 import Pagamento from './componentes/TelaPagamento';
+
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<TelaPrincipal/>} />
-        <Route path="/Pedido" element={<Pedido/>} />
+        <Route path="/Pedidohamburguer" element={<PedidoHamburguer/>} />
+        <Route path="/Pedidobebidas" element={<PedidoBebidas/>} />
         <Route path="/Pagamento" element={<Pagamento/>} />
       </Routes>
     </div>

@@ -1,13 +1,13 @@
-import Tela from '../Tela'
+import Tela from '../../Tela'
 import styles from './index.module.css'
-import FotoLanche from '../../Aseets/HamburguerAus.jpg';
-import Caixa from '../Adicionais/Caixa';
-import GrupoDeRadio from '../Adicionais/GrupoDeRadio/GrupoDeRadio';
+import FotoLanche from '../../../Aseets/HamburguerAus.jpg';
+import Caixa from '../../Adicionais/Caixa';
+import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import { Link } from 'react-router-dom';
 import {CaretLeft} from '@phosphor-icons/react';
-import BotaoFazerPedido from '../Adicionais/BotaoFazerPedido';
+import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido';
 
-function Pedido(){   
+function PedidoHamburguer(){   
     
     const labelsTipoPao = [
         "Pão Australiano",
@@ -58,4 +58,4 @@ function Pedido(){
     );
 }
  
-export default Pedido;
+export default PedidoHamburguer;

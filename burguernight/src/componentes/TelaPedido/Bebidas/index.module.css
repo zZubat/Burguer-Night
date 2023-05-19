@@ -1,0 +1,37 @@
+.imagemdefundo{
+    background-image: url('../../../Aseets/backgroundConfirmarPedido.png');
+    background-attachment: fixed;
+}
+.iconback {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    width: 50px;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(#510f0f85, rgb(34, 5, 5));
+    background-color: black;
+    color: white;
+    width: 350px;
+    height: 140px;
+    padding-top: 10px;
+
+    border-radius: 7%;
+    margin-bottom: 15px;
+}
+.FotoBebida {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    width: 150px;
+    height: 140px;
+    border-radius: 10px;
+}
+.nomepreco {
+    color: rgba(242, 240, 240, 0.886);
+    margin-left: 30px;
+    flex-direction: column;
+    text-align: left;
+}
