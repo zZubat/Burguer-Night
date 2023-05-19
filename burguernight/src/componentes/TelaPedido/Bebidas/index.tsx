@@ -2,10 +2,11 @@ import styles from '../Bebidas/index.module.css'
 import CaretLeft from "@phosphor-icons/react/dist/icons/CaretLeft";
 import { Link } from "react-router-dom";
 import Tela from '../../Tela'
-import FotoBebida from '../../../Aseets/CocaCola.png';
+import FotoBebida from '../../../Aseets/BebidaCocaCola.png';
 import Caixa from '../../Adicionais/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido';
+import SpinnerAdicionais from '../../Adicionais/SpinnerAdicionais';
 
 
 function PedidoBebidas () {
@@ -31,18 +32,15 @@ function PedidoBebidas () {
                     <div className={styles.nomepreco}>   
                         <h3>Coca Cola</h3>
                         <h3>Preço: R$5,00</h3> 
+                
+                        <div className={styles.spinner}>
+                            <SpinnerAdicionais/>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <Caixa titulo={"Algo no Copo? (Obrigatório)"}>
-                        <GrupoDeRadio labels={labelsGelo} grupo="gelo"/>
-                    </Caixa>
-                    <Caixa titulo={"Alguma Observação?"}>
-                        <div>
-                            <h3>Teste da aba Observação</h3>
-                        </div>
-                    </Caixa>
-                </div>
+                <Caixa titulo={"Adicional"}>
+                    <GrupoDeRadio labels={labelsGelo} grupo="gelo"/>
+                </Caixa>
                 <BotaoFazerPedido/>
         </Tela>
     )

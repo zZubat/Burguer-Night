@@ -47,11 +47,6 @@ function PedidoHamburguer(){
                     <Caixa titulo={"Ponto da Carne"}>
                         <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
                     </Caixa>
-                    <Caixa titulo={"Porções"}>
-                        <p>Batata C/ Cheddar e Bacon</p>
-                        <p>Batata C/ Cheddar</p>
-                        <p>Batata</p>
-                    </Caixa>
                 </section>
                 <BotaoFazerPedido/>
             </Tela>
