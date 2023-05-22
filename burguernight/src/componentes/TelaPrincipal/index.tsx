@@ -114,7 +114,7 @@ function TelaPrincipal() {
                 </section>
             </Tela>
             <Modal aberto={modalAberto} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
-                <Pedido/>
+                <Pedido produto={produtoSelecionado}/>
             </Modal>
         </>
     );
