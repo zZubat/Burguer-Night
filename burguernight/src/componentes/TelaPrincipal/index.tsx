@@ -5,7 +5,7 @@ import BoxProduto from './BoxBurguer/index';
 import { useEffect, useState } from 'react';
 import ProdutoService from '../services/ProdutoServices';
 import Produto from '../models/Produto';
-import Caixa from '../Adicionais/Caixa';
+import Caixa from '../Adicionais/Caixa/Caixa';
 
 
 function TelaPrincipal() {

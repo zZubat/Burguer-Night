@@ -1,11 +1,12 @@
 import Tela from '../../Tela'
 import styles from './index.module.css'
 import FotoLanche from '../../../Aseets/HamburguerAus.jpg';
-import Caixa from '../../Adicionais/Caixa';
+import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import { Link } from 'react-router-dom';
 import {CaretLeft} from '@phosphor-icons/react';
-import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido';
+import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
+import TextBox from '../../Adicionais/TextBox/TextBox';
 
 function PedidoHamburguer(){   
     
@@ -20,6 +21,7 @@ function PedidoHamburguer(){
         "Ao Ponto",
         "Bem Passado",
         "Mal Passado",
+
     ];
 
     return(
@@ -39,15 +41,17 @@ function PedidoHamburguer(){
                         <h3>Preço: R$20,00</h3> 
                     </div>
                 </div>
-
-                <section>
+                <div>
                     <Caixa titulo={"Tipo de Pão"}>
                         <GrupoDeRadio labels={labelsTipoPao} grupo="tipo-pao"/>
                     </Caixa>
                     <Caixa titulo={"Ponto da Carne"}>
                         <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
                     </Caixa>
-                </section>
+                </div>
+                <div>
+                    <TextBox/>
+                </div>
                 <BotaoFazerPedido/>
             </Tela>
     );
