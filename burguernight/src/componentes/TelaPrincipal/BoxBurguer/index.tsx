@@ -6,11 +6,12 @@ type Props = {
     ingredientes?: string;
     descricao: string;
     preco: number;
+    onClick?(): void;
 }
 
 function BoxProduto(props: Props){
     return(
-        <div className= {styles.produto}>
+        <div className= {styles.produto} onClick={props.onClick}>
             <h3>{props.nome}</h3>
             <span>{props.ingredientes}</span>
             <span>{props.descricao}</span>
