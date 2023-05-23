@@ -13,7 +13,7 @@ function SpinnerAdicional() {
     const [valor, setValor] = useState(1) 
 
     function adicionar() {
-      if (valor < 5) {
+      if (valor < 10) {
         setValor(valor + 1)
       }
     }
