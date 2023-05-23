@@ -7,6 +7,7 @@ import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
 import SpinnerAdicionais from '../../Adicionais/SpinnerAdicional/SpinnerAdicionais';
+import TextBox from '../../Adicionais/TextBox/TextBox';
 
 
 function PedidoBebidas () {
@@ -25,23 +26,28 @@ function PedidoBebidas () {
                  </a>
             </Link>
         }>
-                <div className={styles.card}>
-                    <div>
-                        <img className={styles.FotoBebida} src={FotoBebida} />
-                    </div>
-                    <div className={styles.nomepreco}>   
-                        <h3>Coca Cola</h3>
-                        <h3>Preço: R$5,00</h3> 
-                
-                        <div className={styles.spinner}>
-                            <SpinnerAdicionais/>
-                        </div>
+            <div className={styles.card}>
+                <div>
+                    <img className={styles.FotoBebida} src={FotoBebida} />
+                </div>
+                <div className={styles.nomepreco}>   
+                    <h3>Coca Cola</h3>
+                    <h3>Preço: R$5,00</h3> 
+            
+                    <div className={styles.spinner}>
+                        <SpinnerAdicionais/>
                     </div>
                 </div>
-                <Caixa titulo={"Adicional"}>
-                    <GrupoDeRadio labels={labelsGelo} grupo="gelo"/>
-                </Caixa>
+            </div>
+            <Caixa titulo={"Adicional"}>
+                <GrupoDeRadio labels={labelsGelo} grupo="gelo"/>
+            </Caixa>
+            <div>
+                <TextBox/>
+            </div>
+            <div>
                 <BotaoFazerPedido/>
+            </div>
         </Tela>
     )
 }
