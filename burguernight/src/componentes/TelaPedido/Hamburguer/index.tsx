@@ -2,8 +2,6 @@ import styles from './index.module.css'
 import FotoLanche from '../../../Aseets/HamburguerAus.jpg';
 import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
-import { Link } from 'react-router-dom';
-import {CaretLeft} from '@phosphor-icons/react';
 import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
 import Produto from '../../models/Produto';
 import TextBox from '../../Adicionais/TextBox/TextBox';
@@ -13,7 +11,7 @@ type Props = {
 }
 
 
-function Pedido(props: Props) {
+function PedidoHamburguer(props: Props) {
 
     const labelsTipoPao = [
         "Pão Australiano",
@@ -51,8 +49,9 @@ function Pedido(props: Props) {
                     <TextBox/>
                 </div>
                 <BotaoFazerPedido/>
-            </Tela>
+            </div>
+        </div>
     );
 }
 
-export default Pedido;
+export default PedidoHamburguer;
