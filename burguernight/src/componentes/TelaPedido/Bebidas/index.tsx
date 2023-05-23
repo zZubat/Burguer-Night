@@ -3,10 +3,10 @@ import CaretLeft from "@phosphor-icons/react/dist/icons/CaretLeft";
 import { Link } from "react-router-dom";
 import Tela from '../../Tela'
 import FotoBebida from '../../../Aseets/BebidaCocaCola.png';
-import Caixa from '../../Adicionais/Caixa';
+import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
-import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido';
-import SpinnerAdicionais from '../../Adicionais/SpinnerAdicionais';
+import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
+import SpinnerAdicionais from '../../Adicionais/SpinnerAdicional/SpinnerAdicionais';
 
 
 function PedidoBebidas () {
