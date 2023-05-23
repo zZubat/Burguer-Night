@@ -1,5 +1,4 @@
 import styles from './index.module.css'
-import { Link } from 'react-router-dom';
 
 type Props = {
    // imagem: string;
