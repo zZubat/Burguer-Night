@@ -9,6 +9,7 @@ type NumeroProps = {
     valor:number;
 }
 
+
 function SpinnerAdicionais() {
     const [valor, setValor] = useState(1) 
 
@@ -25,11 +26,11 @@ function SpinnerAdicionais() {
     }
 
     return(
-        <>
+        <div>
         <Botao onClick={excluir} texto="-"/>
         <Numero valor={valor}/>
         <Botao onClick={adicionar} texto="+"/>  
-        </>
+        </div>
     )
 }
 
