@@ -21,7 +21,8 @@ function PedidoSobreMesa() {
                         <img className={styles.FotoSobreMesa} src={FotoSobreMesa} />
                     </div>
                     <div className={styles.nomepreco}>
-                        <h3>Especial 'Petit Gateau'</h3>
+                        <h3>Especial</h3>
+                        <h3>'Petit Gateau'</h3>
                         <h3>Preço: R$30,00</h3>
                     </div>
                 </div>
