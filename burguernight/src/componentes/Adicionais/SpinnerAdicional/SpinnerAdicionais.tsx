@@ -9,12 +9,11 @@ type NumeroProps = {
     valor:number;
 }
 
-
-function SpinnerAdicionais() {
+function SpinnerAdicional() {
     const [valor, setValor] = useState(1) 
 
     function adicionar() {
-      if (valor < 5) {
+      if (valor < 10) {
         setValor(valor + 1)
       }
     }
@@ -49,4 +48,4 @@ function Numero(props: NumeroProps) {
     );
 }
 
-export default SpinnerAdicionais;
+export default SpinnerAdicional;

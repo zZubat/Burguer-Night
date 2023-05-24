@@ -5,10 +5,11 @@ import BoxProduto from './BoxBurguer/index';
 import { useEffect, useState } from 'react';
 import ProdutoService from '../services/ProdutoServices';
 import Produto from '../models/Produto';
-import Caixa from '../Adicionais/Caixa';
+import Caixa from '../Adicionais/Caixa/Caixa';
 import Modal from '../Modal';
 import PedidoHamburguer from '../TelaPedido/Hamburguer';
 import PedidoBebida from '../TelaPedido/Bebidas'
+
 
 
 function TelaPrincipal() {

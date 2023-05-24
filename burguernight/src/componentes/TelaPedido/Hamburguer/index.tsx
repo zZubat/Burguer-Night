@@ -1,16 +1,17 @@
 import styles from './index.module.css'
 import FotoLanche from '../../../Aseets/HamburguerAus.jpg';
-import Caixa from '../../Adicionais/Caixa';
+import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
-import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido';
+import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
 import Produto from '../../models/Produto';
-
+import TextBox from '../../Adicionais/TextBox/TextBox';
+        
 type Props = {
     produto?: Produto;
 }
 
 
-function Pedido(props: Props) {
+function PedidoHamburguer(props: Props) {
 
     const labelsTipoPao = [
         "Pão Australiano",
@@ -23,6 +24,7 @@ function Pedido(props: Props) {
         "Ao Ponto",
         "Bem Passado",
         "Mal Passado",
+
     ];
 
     return (
@@ -31,26 +33,25 @@ function Pedido(props: Props) {
                 <div>
                     <img className={styles.FotoLanche} src={FotoLanche} />
                 </div>
+
                 <h3>{props.produto?.nome}</h3>
                 <h3>{props.produto?.preco}</h3>
+        
+                <div>
+                    <Caixa titulo={"Tipo de Pão"}>
+                        <GrupoDeRadio labels={labelsTipoPao} grupo="tipo-pao"/>
+                    </Caixa>
+                    <Caixa titulo={"Ponto da Carne"}>
+                        <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
+                    </Caixa>
+                </div>
+                <div>
+                    <TextBox/>
+                </div>
+                <BotaoFazerPedido/>
             </div>
-
-            <section>
-                <Caixa titulo={"Tipo de Pão"}>
-                    <GrupoDeRadio labels={labelsTipoPao} grupo="tipo-pao" />
-                </Caixa>
-                <Caixa titulo={"Ponto da Carne"}>
-                    <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne" />
-                </Caixa>
-                <Caixa titulo={"Porções"}>
-                    <p>Batata C/ Cheddar e Bacon</p>
-                    <p>Batata C/ Cheddar</p>
-                    <p>Batata</p>
-                </Caixa>
-            </section>
-            <BotaoFazerPedido />
         </div>
     );
 }
 
-export default Pedido;
+export default PedidoHamburguer;

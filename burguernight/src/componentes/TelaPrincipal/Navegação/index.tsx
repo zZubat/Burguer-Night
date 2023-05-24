@@ -1,4 +1,3 @@
-import Caixa from '../../Adicionais/Caixa';
 import styles from './index.module.css'
 
 function Navegacao(){

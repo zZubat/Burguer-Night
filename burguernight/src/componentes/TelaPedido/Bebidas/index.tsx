@@ -1,10 +1,9 @@
 import styles from '../Bebidas/index.module.css'
 import FotoBebida from '../../../Aseets/BebidaCocaCola.png';
-import Caixa from '../../Adicionais/Caixa';
+import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
-import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido';
-import SpinnerAdicionais from '../../Adicionais/SpinnerAdicionais';
 import Produto from '../../models/Produto';
+import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
 
 
 type Props = {
