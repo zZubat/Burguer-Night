@@ -24,13 +24,15 @@ function PedidoBebidas(props: Props) {
                 <div>
                     <img className={styles.FotoBebida} src={FotoBebida} />
                 </div>
-                <h3>{props.produto?.nome}</h3>
-                <h3>{props.produto?.preco}</h3>
+                <div>
+                  <h3>{props.produto?.nome}</h3>
+                  <h3>{props.produto?.preco}</h3>
+                </div>
             </div>
             <Caixa titulo={"Adicional"}>
                 <GrupoDeRadio labels={labelsGelo} grupo="gelo" />
             </Caixa>
-            <BotaoFazerPedido />
+            <BotaoFazerPedido/>
         </div>
     )
 }
