@@ -33,10 +33,6 @@ function PedidoBebidas () {
                 <div className={styles.nomepreco}>   
                     <h3>Coca Cola</h3>
                     <h3>Preço: R$5,00</h3> 
-            
-                    <div className={styles.spinner}>
-                        <SpinnerAdicionais/>
-                    </div>
                 </div>
             </div>
             <Caixa titulo={"Adicional"}>
