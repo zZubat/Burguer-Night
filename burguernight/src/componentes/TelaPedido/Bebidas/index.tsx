@@ -1,50 +1,39 @@
 import styles from '../Bebidas/index.module.css'
-import CaretLeft from "@phosphor-icons/react/dist/icons/CaretLeft";
-import { Link } from "react-router-dom";
-import Tela from '../../Tela'
 import FotoBebida from '../../../Aseets/BebidaCocaCola.png';
 import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
+import Produto from '../../models/Produto';
 import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
-import SpinnerAdicionais from '../../Adicionais/SpinnerAdicional/SpinnerAdicionais';
-import TextBox from '../../Adicionais/TextBox/TextBox';
 
 
-function PedidoBebidas () {
-    
+type Props = {
+    produto?: Produto;
+}
+
+function PedidoBebidas(props: Props) {
+
     const labelsGelo = [
         "Gelo e limão",
         "Apenas Gelo",
         "Sem Gelo",
     ]
-    
+
     return (
-        <Tela barraTopo={
-            <Link to="/">
-                <a className={styles.iconback}>
-                    <CaretLeft color="#fff" size={42} />
-                 </a>
-            </Link>
-        }>
+        <div>
             <div className={styles.card}>
                 <div>
                     <img className={styles.FotoBebida} src={FotoBebida} />
                 </div>
-                <div className={styles.nomepreco}>   
-                    <h3>Coca Cola</h3>
-                    <h3>Preço: R$5,00</h3> 
+                <div>
+                  <h3>{props.produto?.nome}</h3>
+                  <h3>{props.produto?.preco}</h3>
                 </div>
             </div>
             <Caixa titulo={"Adicional"}>
-                <GrupoDeRadio labels={labelsGelo} grupo="gelo"/>
+                <GrupoDeRadio labels={labelsGelo} grupo="gelo" />
             </Caixa>
-            <div>
-                <TextBox/>
-            </div>
-            <div>
-                <BotaoFazerPedido/>
-            </div>
-        </Tela>
+            <BotaoFazerPedido/>
+        </div>
     )
 }
 

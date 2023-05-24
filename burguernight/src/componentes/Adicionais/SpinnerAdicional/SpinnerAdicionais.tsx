@@ -25,11 +25,11 @@ function SpinnerAdicional() {
     }
 
     return(
-        <>
+        <div>
         <Botao onClick={excluir} texto="-"/>
         <Numero valor={valor}/>
         <Botao onClick={adicionar} texto="+"/>  
-        </>
+        </div>
     )
 }
 

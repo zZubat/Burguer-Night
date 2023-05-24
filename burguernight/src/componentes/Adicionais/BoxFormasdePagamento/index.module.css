@@ -35,8 +35,6 @@
     display: flex;
     flex-direction: column;
     flex-grow: 8;
-    align-items: center;
-    justify-items: center;
 }
 
 
@@ -67,4 +65,34 @@
     border-top-right-radius: 13px;
     border-bottom-right-radius: 13px;
     border-bottom-left-radius: 13px;
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.boxCPF {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    font-size: 13.98px;
+    text-align: left;
+    font-size: 12.5px;
+}
+
+.boxCPF h3 {
+    opacity: 0.5;
+}
+
+hgroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.boatoalterar {
+    display: flex;
+    flex-direction: column;
 }
