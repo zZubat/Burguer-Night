@@ -1,48 +1,38 @@
 import styles from '../Bebidas/index.module.css'
-import CaretLeft from "@phosphor-icons/react/dist/icons/CaretLeft";
-import { Link } from "react-router-dom";
-import Tela from '../../Tela'
 import FotoBebida from '../../../Aseets/BebidaCocaCola.png';
 import Caixa from '../../Adicionais/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido';
 import SpinnerAdicionais from '../../Adicionais/SpinnerAdicionais';
+import Produto from '../../models/Produto';
 
 
-function PedidoBebidas () {
-    
+type Props = {
+    produto?: Produto;
+}
+
+function PedidoBebidas(props: Props) {
+
     const labelsGelo = [
         "Gelo e limão",
         "Apenas Gelo",
         "Sem Gelo",
     ]
-    
+
     return (
-        <Tela barraTopo={
-            <Link to="/">
-                <a className={styles.iconback}>
-                    <CaretLeft color="#fff" size={42} />
-                 </a>
-            </Link>
-        }>
-                <div className={styles.card}>
-                    <div>
-                        <img className={styles.FotoBebida} src={FotoBebida} />
-                    </div>
-                    <div className={styles.nomepreco}>   
-                        <h3>Coca Cola</h3>
-                        <h3>Preço: R$5,00</h3> 
-                
-                        <div className={styles.spinner}>
-                            <SpinnerAdicionais/>
-                        </div>
-                    </div>
+        <div>
+            <div className={styles.card}>
+                <div>
+                    <img className={styles.FotoBebida} src={FotoBebida} />
                 </div>
-                <Caixa titulo={"Adicional"}>
-                    <GrupoDeRadio labels={labelsGelo} grupo="gelo"/>
-                </Caixa>
-                <BotaoFazerPedido/>
-        </Tela>
+                <h3>{props.produto?.nome}</h3>
+                <h3>{props.produto?.preco}</h3>
+            </div>
+            <Caixa titulo={"Adicional"}>
+                <GrupoDeRadio labels={labelsGelo} grupo="gelo" />
+            </Caixa>
+            <BotaoFazerPedido />
+        </div>
     )
 }
 
