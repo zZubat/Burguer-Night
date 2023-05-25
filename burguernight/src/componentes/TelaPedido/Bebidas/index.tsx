@@ -4,6 +4,7 @@ import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import Produto from '../../models/Produto';
 import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
+import TextBox from '../../Adicionais/TextBox/TextBox';
 
 
 type Props = {
@@ -20,7 +21,7 @@ function PedidoBebidas(props: Props) {
 
     return (
         <div>
-            <div className={styles.card}>
+            <div>
                 <div>
                     <img className={styles.FotoBebida} src={FotoBebida} />
                 </div>
@@ -32,6 +33,7 @@ function PedidoBebidas(props: Props) {
             <Caixa titulo={"Adicional"}>
                 <GrupoDeRadio labels={labelsGelo} grupo="gelo" />
             </Caixa>
+            <TextBox/>
             <BotaoFazerPedido/>
         </div>
     )

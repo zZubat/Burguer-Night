@@ -33,34 +33,26 @@ function PedidoHamburguer(props: Props) {
                 <div>
                     <img className={styles.FotoLanche} src={FotoLanche} />
                 </div>
-
-                <h3>{props.produto?.nome}</h3>
-                <h3>{props.produto?.preco}</h3>
-        
-                <div>
-                    <Caixa titulo={"Tipo de Pão"}>
-                        <GrupoDeRadio labels={labelsTipoPao} grupo="tipo-pao"/>
-                    </Caixa>
-                    <Caixa titulo={"Ponto da Carne"}>
-                        <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
-                    </Caixa>
-                    <Caixa titulo={"Ingredientes"}> 
-                    <ul>
-                        <li>Pão</li>
-                        <li>Bacon</li>
-                        <li>Queijo Coalho Grelhado</li>
-                        <li>Tomate</li>
-                        <li>Carne Seca</li>
-                        <li>Rúcula</li>
-                        <li>Hamburguer de Costela</li>
-                    </ul>
-                    </Caixa>
+                <div className={styles.nomepreco}>
+                    <h3>{props.produto?.nome}</h3>
+                    <h3>{props.produto?.preco}</h3> 
                 </div>
-                <div>
-                    <TextBox/>
-                </div>
-                <BotaoFazerPedido/>
             </div>
+            <div>
+                <Caixa titulo={"Tipo de Pão"}>
+                    <GrupoDeRadio labels={labelsTipoPao} grupo="tipo-pao"/>
+                </Caixa>
+                <Caixa titulo={"Ponto da Carne"}>
+                    <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
+                </Caixa>
+                <Caixa titulo={"Ingredientes"}> 
+                <ul>
+                    <li>{props.produto?.descricao}</li>
+                </ul>
+                </Caixa>
+            </div>
+            <TextBox/> 
+            <BotaoFazerPedido/>
         </div>
     );
 }
