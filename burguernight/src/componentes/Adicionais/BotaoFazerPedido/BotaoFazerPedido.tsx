@@ -8,9 +8,8 @@ type Props = {
 
 function BotaoFazerPedido () {
     return (
-            <Link to={"/"}>
-                <button className={styles.borda}>
-                    <p>Fazer Pedido</p>
+        <button className={styles.borda} onClick={handleClick}>
+            Fazer Pedido
                 </button>
             </Link>
     )
