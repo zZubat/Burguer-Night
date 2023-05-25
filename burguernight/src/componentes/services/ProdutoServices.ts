@@ -42,7 +42,7 @@ const mock: Produto[] = [
         nome: 'Fanta',
         ingredientes: '',
         descricao: 'Fanta 600ml',
-        preco: 5,
+        preco: 5.,
         tipo:'bebida'
     },
     {
@@ -58,7 +58,7 @@ const mock: Produto[] = [
         nome: 'Porção de Batata Frita C/ Cheddar e Bacon',
         ingredientes: '',
         descricao: 'Porção de Batata Frita C/ Cheddar e Bacon Grande',
-        preco: 38,
+        preco: 38.,
         tipo:'porcao'
     },
     {
@@ -66,7 +66,7 @@ const mock: Produto[] = [
         nome: 'Petit Gateau',
         ingredientes: '',
         descricao: 'Bolo de Chocolate C/ Recheio de Chocolate e Duas bolas de Sorvete de Baunilha',
-        preco: 30,
+        preco: 30.,
         tipo:'sobremesa'
     },
     {
@@ -74,7 +74,7 @@ const mock: Produto[] = [
         nome: 'Crème Brûlée',
         ingredientes: '',
         descricao: 'O crème brûlée é uma das sobremesas mais famosas da França. Ele é delicioso porque é leve, tem um toque de baunilha e fica com uma tentadora casquinha crocante por cima.',
-        preco: 45,
+        preco: 45.,
         tipo:'sobremesa'
     },
 ];
