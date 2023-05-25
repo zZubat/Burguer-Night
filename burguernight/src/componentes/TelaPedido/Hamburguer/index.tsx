@@ -42,6 +42,17 @@ function PedidoHamburguer(props: Props) {
                     <Caixa titulo={"Ponto da Carne"}>
                         <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
                     </Caixa>
+                    <Caixa titulo={"Ingredientes"}> 
+                    <ul>
+                        <li>Pão</li>
+                        <li>Bacon</li>
+                        <li>Queijo Coalho Grelhado</li>
+                        <li>Tomate</li>
+                        <li>Carne Seca</li>
+                        <li>Rúcula</li>
+                        <li>Hamburguer de Costela</li>
+                    </ul>
+                    </Caixa>
                 </div>
                 <BotaoFazerPedido/>
             </div>
