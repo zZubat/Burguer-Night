@@ -1,11 +1,11 @@
 .botaoCarrinho{
     background-image: url('../../../Aseets/icons8-shopping-cart-24.png');
     background-repeat: no-repeat;
-    background-position: center;
-    font-size: 0;
+    
+
+    display: flex;
     width: 24px;
     height: 24px;
-    display: inline-block;
-    padding: 8px;
-    display: flex;
+    padding: 15px;
+    
 }
