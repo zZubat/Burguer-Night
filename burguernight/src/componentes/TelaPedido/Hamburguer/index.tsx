@@ -29,7 +29,7 @@ function PedidoHamburguer(props: Props) {
 
     return (
         <div>
-            <div>
+            <div className={styles.card}>
                 <div>
                     <img className={styles.FotoLanche} src={FotoLanche} />
                 </div>
