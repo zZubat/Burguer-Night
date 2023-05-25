@@ -22,8 +22,8 @@ function PedidoSobreMesa() {
                     </div>
                     <div className={styles.nomepreco}>
                         <h3>Especial</h3>
-                        <h3>'Petit Gateau'</h3>
-                        <h3>Preço: R$30,00</h3>
+                        <h3>{props.produto?.nome}</h3>
+                        <h3>{props.produto?.preco}</h3>
                     </div>
                 </div>
                 <Caixa titulo={"Ingredientes:"}>
