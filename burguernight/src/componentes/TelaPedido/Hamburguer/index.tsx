@@ -29,14 +29,12 @@ function PedidoHamburguer(props: Props) {
 
     return (
         <div>
-            <div className={styles.card}>
+            <div>
                 <div>
                     <img className={styles.FotoLanche} src={FotoLanche} />
                 </div>
-
                 <h3>{props.produto?.nome}</h3>
-                <h3>{props.produto?.preco}</h3>
-        
+                <h3>R${props.produto?.preco}</h3>     
                 <div>
                     <Caixa titulo={"Tipo de Pão"}>
                         <GrupoDeRadio labels={labelsTipoPao} grupo="tipo-pao"/>
@@ -44,9 +42,6 @@ function PedidoHamburguer(props: Props) {
                     <Caixa titulo={"Ponto da Carne"}>
                         <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
                     </Caixa>
-                </div>
-                <div>
-                    <TextBox/>
                 </div>
                 <BotaoFazerPedido/>
             </div>

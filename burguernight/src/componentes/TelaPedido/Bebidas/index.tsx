@@ -25,7 +25,7 @@ function PedidoBebidas(props: Props) {
                     <img className={styles.FotoBebida} src={FotoBebida} />
                 </div>
                 <h3>{props.produto?.nome}</h3>
-                <h3>{props.produto?.preco}</h3>
+                <h3>R${props.produto?.preco}0</h3>
             </div>
             <Caixa titulo={"Adicional"}>
                 <GrupoDeRadio labels={labelsGelo} grupo="gelo" />
