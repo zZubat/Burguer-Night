@@ -10,13 +10,7 @@
     border-radius: 20px;
     padding-bottom: 15px;
 }
-.f {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex-grow: 9;
-}
+
 .logo{
     display: flex;
     flex-direction: row;
@@ -34,7 +28,8 @@
 .BoxDocumento {
     display: flex;
     flex-direction: column;
-    flex-grow: 8;
+    flex-grow: 100;
+    text-align: right;
 }
 
 
@@ -67,20 +62,19 @@
     border-bottom-left-radius: 13px;
 }
 
-.row{
+.documento{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .boxCPF {
+    
     display: flex;
-    flex-direction: row;
-    color: white;
-    justify-content: space-around;
-    font-size: 13.98px;
-    text-align: left;
-    font-size: 12.5px;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+
 }
 
 .boxCPF h3 {
@@ -92,7 +86,65 @@ hgroup {
     flex-direction: column;
 }
 
-.boatoalterar {
+.boxAddcpf {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.boxCPF {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    flex-grow: 1;
+
+
+    text-align: left;
+    font-size: 10.5px;
+}
+.pagamento {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 9;
+    justify-content: space-around;
+}
+.escolhapagamento {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 8;
+}
+
+.boxPagar {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    
+    
+    text-align: left;
+    font-size: 10.5px;
+    
+    
+}
+
+.comopagar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.boxPagar h1{
+    position: absolute;
+    left: 9%;
+    top: 84%;
+    font-size: 18px;
+}
+
+.textarea {
+    color: #808080 ;
+    background-color: transparent;
+    border: 0;
+    text-align: center;
 }
