@@ -7,7 +7,10 @@ import ProdutoService from '../services/ProdutoServices';
 import Produto from '../models/Produto';
 import Caixa from '../Adicionais/Caixa/Caixa';
 import Modal from '../Modal';
-import Pedido from '../TelaPedido/Hamburguer';
+import PedidoHamburguer from '../TelaPedido/Hamburguer';
+import PedidoBebida from '../TelaPedido/Bebidas'
+import PedidoPorcoes from '../TelaPedido/Porcoes';
+import PedidoSobreMesa from '../TelaPedido/SobreMesa';
 
 
 
@@ -16,6 +19,9 @@ function TelaPrincipal() {
     const [carregando, setCarregando] = useState(true);
     const [produto, setProduto] = useState<Produto[]>([]);
     const [modalAberto, setModalAberto] = useState(false);
+    const [modalAbertoBebidas, setModalAbertoBebidas] = useState(false);
+    const [modalAbertoPorcoes, setModalAbertoPorcoes] = useState(false);
+    const [modalAbertoSobremesas, setModalAbertoSobremesas] = useState(false);
     const [produtoSelecionado, setProdutoSelecionado] = useState<Produto>();
 
     useEffect(function () {
@@ -66,11 +72,25 @@ function TelaPrincipal() {
 
     function handleProdutoSelecionado(produto: Produto) {
         setProdutoSelecionado(produto);
-        setModalAberto(true);
-    }
+        setModalAberto(true); }
+
+    function handleProdutoSelecionadoBebidas (produto: Produto) {
+        setProdutoSelecionado(produto);
+        setModalAbertoBebidas(true);}
+
+        function handleProdutoSelecionadoPorcoes (produto: Produto) {
+            setProdutoSelecionado(produto);
+            setModalAbertoPorcoes(true);}
+
+            function handleProdutoSelecionadoSobremesas (produto: Produto) {
+                setProdutoSelecionado(produto);
+                setModalAbertoSobremesas(true);}
 
     function handleModalClose() {
         setModalAberto(false);
+        setModalAbertoBebidas(false);
+        setModalAbertoPorcoes(false);
+        setModalAbertoSobremesas(false);
     }
 
     return (
@@ -92,7 +112,7 @@ function TelaPrincipal() {
                     {(carregando === true) && (
                         <p>Carregando...</p>
                     )}
-                    {<Lista tipo={'bebida'} onSelect={handleProdutoSelecionado}/>}
+                    {<Lista tipo={'bebida'} onSelect={handleProdutoSelecionadoBebidas}/>}
                     </Caixa>
                 </section>
 
@@ -101,7 +121,7 @@ function TelaPrincipal() {
                     {(carregando === true) && (
                         <p>Carregando...</p>
                     )}
-                    {<Lista tipo={'porcao'} onSelect={handleProdutoSelecionado}/>}
+                    {<Lista tipo={'porcao'} onSelect={handleProdutoSelecionadoPorcoes}/>}
                     </Caixa>
                 </section>
 
@@ -115,7 +135,16 @@ function TelaPrincipal() {
                 </section>
             </Tela>
             <Modal aberto={modalAberto} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
-                <Pedido produto={produtoSelecionado}/>
+                <PedidoHamburguer produto={produtoSelecionado}/>
+            </Modal>
+            <Modal aberto={modalAbertoBebidas} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
+                <PedidoBebida produto={produtoSelecionado}/>
+            </Modal>
+            <Modal aberto={modalAbertoPorcoes} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
+                <PedidoPorcoes produto={produtoSelecionado}/>
+            </Modal>
+            <Modal aberto={modalAbertoSobremesas} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
+                <PedidoSobreMesa produto={produtoSelecionado}/>
             </Modal>
         </>
     );

@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom';
 import styles from './BotaoFazerPedido.module.css'
 
+type Props = {  
+    onClick(): void;
+}
 
-function BotaoFazerPedido () {
+function BotaoFazerPedido (props: Props) {
     return (
-            <Link to={"/"}>
-                <button className={styles.borda}>
-                    <p>Fazer Pedido</p>
-                </button>
-            </Link>
+        <button className={styles.borda} onClick={props.onClick}>
+            Fazer Pedido
+        </button>
     )
 }
 

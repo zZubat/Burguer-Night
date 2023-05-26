@@ -5,6 +5,8 @@ import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
 import Produto from '../../models/Produto';
 import TextBox from '../../Adicionais/TextBox/TextBox';
+import { useState } from 'react';
+import Pedido from '../../models/Pedido';
         
 type Props = {
     produto?: Produto;
@@ -12,6 +14,10 @@ type Props = {
 
 
 function PedidoHamburguer(props: Props) {
+
+    const [tipoPao, setTipoPao] = useState('');
+    const [pontoCarne, setPontoCarne] = useState('');
+    const [observacao, setObservacao] = useState('');
 
     const labelsTipoPao = [
         "Pão Australiano",
@@ -27,29 +33,48 @@ function PedidoHamburguer(props: Props) {
 
     ];
 
+    function handleFazerPedido() {
+        if (props.produto) {
+            const pedido: Pedido = {
+                produto: props.produto,
+                tipo: 'hamburguer',
+                adicionais: [],
+                opcoes: [
+                    tipoPao,
+                    pontoCarne,
+                ],
+                observacao,
+            }
+            //TODO: Salvar o pedido no contexto carrinho.
+        }
+    }
+
     return (
         <div>
             <div className={styles.card}>
                 <div>
                     <img className={styles.FotoLanche} src={FotoLanche} />
                 </div>
-
-                <h3>{props.produto?.nome}</h3>
-                <h3>{props.produto?.preco}</h3>
-        
-                <div>
-                    <Caixa titulo={"Tipo de Pão"}>
-                        <GrupoDeRadio labels={labelsTipoPao} grupo="tipo-pao"/>
-                    </Caixa>
-                    <Caixa titulo={"Ponto da Carne"}>
-                        <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne"/>
-                    </Caixa>
+                <div className={styles.nomepreco}>
+                    <h3>{props.produto?.nome}</h3>
+                    <h3>{props.produto?.preco}</h3> 
                 </div>
-                <div>
-                    <TextBox/>
-                </div>
-                <BotaoFazerPedido/>
             </div>
+            <div>
+                <Caixa titulo={"Tipo de Pão"}>
+                    <GrupoDeRadio labels={labelsTipoPao} grupo="tipo-pao" onChange={setTipoPao}/>
+                </Caixa>
+                <Caixa titulo={"Ponto da Carne"}>
+                    <GrupoDeRadio labels={labelsPontoDaCarne} grupo="ponto-da-carne" onChange={setPontoCarne}/>
+                </Caixa>
+                <Caixa titulo={"Ingredientes"}> 
+                <ul>
+                    <li>{props.produto?.descricao}</li>
+                </ul>
+                </Caixa>
+            </div>
+            <TextBox onChange={setObservacao}/>
+            <BotaoFazerPedido onClick={handleFazerPedido}/>
         </div>
     );
 }

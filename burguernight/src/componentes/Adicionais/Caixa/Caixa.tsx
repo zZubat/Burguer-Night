@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import styles from './Caixa.module.css'
 
 type Props = {
-    titulo: string;
+    titulo?: string;
     children: ReactNode;
 };
 
