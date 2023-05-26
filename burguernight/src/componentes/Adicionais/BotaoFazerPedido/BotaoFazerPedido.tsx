@@ -1,17 +1,14 @@
-import { type } from 'os';
-import { Link } from 'react-router-dom';
 import styles from './BotaoFazerPedido.module.css'
 
 type Props = {  
-    onClose(): void;
+    onClick(): void;
 }
 
-function BotaoFazerPedido () {
+function BotaoFazerPedido (props: Props) {
     return (
-        <button className={styles.borda} onClick={handleClick}>
+        <button className={styles.borda} onClick={props.onClick}>
             Fazer Pedido
-                </button>
-            </Link>
+        </button>
     )
 }
 
