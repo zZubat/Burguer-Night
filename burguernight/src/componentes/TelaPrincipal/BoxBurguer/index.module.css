@@ -1,3 +1,11 @@
+.fundo{
+    background: linear-gradient(#211704d8, rgb(27, 19, 4));
+    background-color: rgba(34, 33, 33, 0.551);
+    color: white;
+    border-radius: 5%;
+    padding: 3px;
+    margin: 10px;
+}
 
 .preco {
     padding-top: 15px;
