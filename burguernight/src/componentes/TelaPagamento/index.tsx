@@ -34,8 +34,9 @@ function Pagamento() {
                                 <div>
                                     <img className={styles.FotoLanche1} src={FotoLanche1} />
                                 </div>
-                                <div className={styles.nomepreco1}>   
-                                    <h3 className={styles.titulo}>{pedido.produto.nome}</h3>
+                                <div className={styles.nomepreco1}>
+                                    <h3>Especial</h3>
+                                    <h3 className={styles.titulo}>"{pedido.produto.nome}"</h3>
                                     <h3>Preço: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(pedido.produto.preco)}</h3> 
                                 </div>
                             </div>  
@@ -47,8 +48,9 @@ function Pagamento() {
                         <div>
                             <img className={styles.FotoLanche1} src={FotoLanche1} />
                         </div>
-                        <div className={styles.nomepreco1}>   
-                            <h3 className={styles.titulo}>Australiano</h3>
+                        <div className={styles.nomepreco1}>
+                            <h3>Especial</h3>
+                            <h3 className={styles.titulo}>"Australiano"</h3>
                             <h3>Preço: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(20)}</h3> 
                         </div>
                     </div>       
