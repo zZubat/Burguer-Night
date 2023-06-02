@@ -9,6 +9,8 @@ import Caixa from '../Adicionais/Caixa/Caixa';
 import Modal from '../Modal';
 import PedidoHamburguer from '../TelaPedido/Hamburguer';
 import PedidoBebida from '../TelaPedido/Bebidas'
+import PedidoPorcoes from '../TelaPedido/Porcoes';
+import PedidoSobreMesa from '../TelaPedido/SobreMesa';
 
 
 
@@ -128,7 +130,7 @@ function TelaPrincipal() {
                     {(carregando === true) && (
                         <p>Carregando...</p>
                     )}
-                    {<Lista tipo={'sobremesa'} onSelect={handleProdutoSelecionado}/>}
+                    {<Lista tipo={'sobremesa'} onSelect={handleProdutoSelecionadoSobremesas}/>}
                     </Caixa>
                 </section>
             </Tela>
@@ -139,7 +141,10 @@ function TelaPrincipal() {
                 <PedidoBebida produto={produtoSelecionado}/>
             </Modal>
             <Modal aberto={modalAbertoPorcoes} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
-                <PedidoBebida produto={produtoSelecionado}/>
+                <PedidoPorcoes produto={produtoSelecionado}/>
+            </Modal>
+            <Modal aberto={modalAbertoSobremesas} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
+                <PedidoSobreMesa produto={produtoSelecionado}/>
             </Modal>
         </>
     );

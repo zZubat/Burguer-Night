@@ -27,5 +27,7 @@
 .nomepreco {
     color: rgba(242, 240, 240, 0.886);
     margin-left: 30px;
-    padding-right: 13px;
+    flex-direction: column;
+    width: 170px;
+    height: 160px;
 }

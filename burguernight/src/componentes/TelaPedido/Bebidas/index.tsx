@@ -21,13 +21,13 @@ function PedidoBebidas(props: Props) {
 
     return (
         <div>
-            <div>
+            <div className={styles.card}>
                 <div>
                     <img className={styles.FotoBebida} src={FotoBebida} />
                 </div>
                 <div>
                   <h3>{props.produto?.nome}</h3>
-                  <h3>{props.produto?.preco}</h3>
+                  <h3>R$ {props.produto?.preco}</h3>
                 </div>
             </div>
             <Caixa titulo={"Adicional"}>

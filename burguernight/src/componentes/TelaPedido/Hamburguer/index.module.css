@@ -1,6 +1,14 @@
 .card{
     display: flex;
     flex-direction: row;
+    background: linear-gradient(#43341bc8, rgb(27, 19, 4));
+    background-color: rgba(34, 33, 33, 0.551);
+    color: white;
+    width: 350px;
+    height: 150px;
+    padding-top: 10px;
+    border-radius: 7%;
+    margin-bottom: 15px;
 }
 .FotoLanche {
     display: flex;

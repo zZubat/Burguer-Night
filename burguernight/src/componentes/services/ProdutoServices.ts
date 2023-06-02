@@ -16,8 +16,8 @@ const mock: Produto[] = [
     {
         id: 1,
         nome: 'X-Salada',
-        ingredientes: 'pão, hamburguer, tomate, alface',
-        descricao: '',
+        ingredientes: '',
+        descricao: 'pão, hamburguer, tomate, alface',
         preco: 20,
         tipo:'burguer'
     },
