@@ -30,7 +30,7 @@ function Pagamento() {
                 <div className={styles.cardpedidos}>
                     {pedidos?.map(function (pedido) {
                         return (
-                            <div className={styles.cardpedido1}>
+                            <div className={styles.cardpedido}>
                                 <div>
                                     <img className={styles.FotoLanche1} src={FotoLanche1} />
                                 </div>

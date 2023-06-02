@@ -7,9 +7,11 @@ import Produto from '../../models/Produto';
 import TextBox from '../../Adicionais/TextBox/TextBox';
 import { useState } from 'react';
 import Pedido from '../../models/Pedido';
+import CarrinhoRepository from '../../../repositories/CarrinhoRepository';
         
 type Props = {
     produto?: Produto;
+    onPedidoFeito?(): void;
 }
 
 
@@ -45,7 +47,10 @@ function PedidoHamburguer(props: Props) {
                 ],
                 observacao,
             }
-            //TODO: Salvar o pedido no contexto carrinho.
+            CarrinhoRepository.inserirNovoPedido(pedido);
+            if (props.onPedidoFeito) {
+                props.onPedidoFeito();
+            }
         }
     }
 
