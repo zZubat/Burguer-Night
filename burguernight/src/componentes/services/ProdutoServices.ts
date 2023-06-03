@@ -16,8 +16,8 @@ const mock: Produto[] = [
     {
         id: 1,
         nome: 'X-Salada',
-        ingredientes: '',
-        descricao: 'pão, hamburguer, tomate, alface',
+        ingredientes: 'pão, tomate, alface, mussarela, maionese, hamburguer',
+        descricao: 'Pão, Tomate, Alface, Mussarela, Maionese, Hamburguer',
         preco: 20,
         tipo:'burguer'
     },
@@ -55,9 +55,9 @@ const mock: Produto[] = [
     },
     {
         id: 6,
-        nome: 'Porção de Batata Frita C/ Cheddar e Bacon',
+        nome: 'Porção de Batata Frita C/ Cheddar',
         ingredientes: '',
-        descricao: 'Porção de Batata Frita C/ Cheddar e Bacon Grande',
+        descricao: 'Porção de Batata Frita C/ Cheddar',
         preco: 38.,
         tipo:'porcao'
     },

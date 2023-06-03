@@ -1,23 +1,19 @@
-.navegacao{
+.borda{
+    display: flex;
     background: linear-gradient(#43341bc8, rgb(27, 19, 4));
     background-color: rgba(34, 33, 33, 0.551);
-    color: white;
-    opacity: 80%;
-    border-radius: 14px;
+    opacity: 90%;
     margin-bottom: 15px;
     padding: 10px;
 }
-
 .navegacao  nav{
     display: flex;
     flex-direction:row;
-    
  }
-
  .navegacao a {
     text-decoration: none;
     color: white;
     justify-content: space-evenly;
-    padding: 7px;
+    padding: 10px;
     text-align: center;
  }

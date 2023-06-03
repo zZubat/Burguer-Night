@@ -13,6 +13,8 @@ import { useState } from 'react';
 function Pagamento() {
     const [pedidos, setPedidos] = useState<Pedido[]>();
 
+    setPedidos(pedidos);
+
     return (
             <Tela  barraTopo={
                 <div className={styles.topo}>
@@ -34,7 +36,7 @@ function Pagamento() {
                                 <div>
                                     <img className={styles.FotoLanche1} src={FotoLanche1} />
                                 </div>
-                                <div className={styles.nomepreco1}>   
+                                <div className={styles.nomepreco}>   
                                     <h3 className={styles.titulo}>{pedido.produto.nome}</h3>
                                     <h3>Preço: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(pedido.produto.preco)}</h3> 
                                 </div>

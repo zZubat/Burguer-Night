@@ -1,0 +1,15 @@
+.caixa{
+    background: linear-gradient(#43341bc8, rgb(27, 19, 4));
+    background-color: rgba(34, 33, 33, 0.551);
+    color: white;
+    border-radius: 4%;
+    margin-bottom: 15px;
+}
+.caixa h3{
+    padding: 15px;
+    margin-bottom: 0;
+}
+.conteudo{
+    padding: 13px;
+    text-align: left;
+}
