@@ -62,7 +62,7 @@ function PedidoHamburguer(props: Props) {
                 </div>
                 <div className={styles.nomepreco}>
                     <h3>{props.produto?.nome}</h3>
-                    <h3>{props.produto?.preco}</h3> 
+                    <h3>Preço: {props.produto?.preco}</h3> 
                 </div>
             </div>
             <div>

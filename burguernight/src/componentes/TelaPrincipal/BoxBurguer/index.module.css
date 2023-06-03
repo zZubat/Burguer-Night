@@ -4,9 +4,24 @@
     color: white;
     border-radius: 5%;
     padding: 3px;
-    margin: 10px;
+    margin-bottom: 18px;
 }
-
-.preco {
-    padding-top: 15px;
+.card{
+    display: flex;
+    flex-direction: row;
+}
+.foto{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 130px;
+    height: 120px;
+    border-radius: 10px;
+}
+.titulo{
+    padding-left: 5px;
+}
+.nomepreco {
+    padding-left: 10px;
 }

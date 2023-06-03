@@ -5,12 +5,12 @@ import BoxProduto from './BoxBurguer/index';
 import { useEffect, useState } from 'react';
 import ProdutoService from '../services/ProdutoServices';
 import Produto from '../models/Produto';
-import Caixa from '../Adicionais/Caixa/Caixa';
 import Modal from '../Modal';
 import PedidoHamburguer from '../TelaPedido/Hamburguer';
 import PedidoBebida from '../TelaPedido/Bebidas'
 import PedidoPorcoes from '../TelaPedido/Porcoes';
 import PedidoSobreMesa from '../TelaPedido/SobreMesa';
+import styles from '../TelaPrincipal/index.module.css'
 
 
 
@@ -99,39 +99,51 @@ function TelaPrincipal() {
                 <Carrinho/>
                 <Navegacao/>
                 <section id="Burguer">
-                    <Caixa titulo={"Burguers"}>
-                    {(carregando === true) && (
-                        <p>Carregando...</p>
-                    )}
-                    {<Lista tipo={'burguer'} onSelect={handleProdutoSelecionado} />}
-                    </Caixa>
+                    <div className={styles.caixa}>
+                        <h3>Burguers</h3>
+                        <div className={styles.conteudo}>
+                            {(carregando === true) && (
+                            <p>Carregando...</p>
+                            )}
+                            {<Lista tipo={'burguer'} onSelect={handleProdutoSelecionado} />}
+                        </div>
+                    </div>
                 </section>
 
                 <section id="Bebidas">
-                    <Caixa titulo={"Bebidas"}>
-                    {(carregando === true) && (
-                        <p>Carregando...</p>
-                    )}
-                    {<Lista tipo={'bebida'} onSelect={handleProdutoSelecionadoBebidas}/>}
-                    </Caixa>
+                    <div className={styles.caixa}>
+                        <h3>Bebidas</h3>
+                        <div className={styles.conteudo}>
+                            {(carregando === true) && (
+                            <p>Carregando...</p>
+                            )}
+                            {<Lista tipo={'bebida'} onSelect={handleProdutoSelecionadoBebidas}/>}
+                        </div>
+                    </div>
                 </section>
 
                 <section id="Porções">
-                    <Caixa titulo={"Porções"}>
-                    {(carregando === true) && (
-                        <p>Carregando...</p>
-                    )}
-                    {<Lista tipo={'porcao'} onSelect={handleProdutoSelecionadoPorcoes}/>}
-                    </Caixa>
+                    <div className={styles.caixa}>
+                        <h3>Porções</h3>
+                        <div className={styles.conteudo}>
+                            {(carregando === true) && (
+                            <p>Carregando...</p>
+                            )}
+                            {<Lista tipo={'porcao'} onSelect={handleProdutoSelecionadoPorcoes}/>}
+                        </div>
+                    </div>            
                 </section>
 
                 <section id="Sobremesas">
-                    <Caixa titulo={"Sobremesas"}>
-                    {(carregando === true) && (
-                        <p>Carregando...</p>
-                    )}
-                    {<Lista tipo={'sobremesa'} onSelect={handleProdutoSelecionado}/>}
-                    </Caixa>
+                <div className={styles.caixa}>
+                        <h3>Sobremesas</h3>
+                        <div className={styles.conteudo}>
+                            {(carregando === true) && (
+                            <p>Carregando...</p>
+                            )}
+                           {<Lista tipo={'sobremesa'} onSelect={handleProdutoSelecionado}/>}
+                        </div>
+                    </div> 
                 </section>
             </Tela>
             <Modal aberto={modalAberto} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>

@@ -6,9 +6,11 @@ import styles from '../SobreMesa/index.module.css'
 import Produto from '../../models/Produto';
 import Pedido from '../../models/Pedido';
 import { useState } from 'react';
+import CarrinhoRepository from '../../../repositories/CarrinhoRepository';
 
 type Props = {
     produto?: Produto;
+    onPedidoFeito?(): void;
 }
 
 function PedidoSobreMesa(props: Props) {
@@ -24,6 +26,10 @@ function PedidoSobreMesa(props: Props) {
                 opcoes: [],
                 observacao,
             }
+            CarrinhoRepository.inserirNovoPedido(pedido);
+            if (props.onPedidoFeito) {
+                props.onPedidoFeito();
+            }
         }
     }
 
@@ -36,7 +42,7 @@ function PedidoSobreMesa(props: Props) {
                 <div className={styles.nomepreco}>
                     <h3>Especial</h3>
                     <h3>{props.produto?.nome}</h3>
-                    <h3>{props.produto?.preco}</h3> 
+                    <h3>Preço: {props.produto?.preco}</h3> 
                 </div>
             </div>
             <Caixa titulo={"Ingredientes:"}>

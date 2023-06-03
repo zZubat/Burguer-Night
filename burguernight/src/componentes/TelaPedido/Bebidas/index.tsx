@@ -7,10 +7,12 @@ import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido
 import TextBox from '../../Adicionais/TextBox/TextBox';
 import { useState } from 'react';
 import Pedido from '../../models/Pedido';
+import CarrinhoRepository from '../../../repositories/CarrinhoRepository';
 
 
 type Props = {
     produto?: Produto;
+    onPedidoFeito?(): void;
 }
 
 function PedidoBebidas(props: Props) {
@@ -35,7 +37,10 @@ function PedidoBebidas(props: Props) {
                 opcoes: [],
                 observacao,
             }
-            //TODO: Salvar o pedido no contexto carrinho.
+            CarrinhoRepository.inserirNovoPedido(pedido);
+            if (props.onPedidoFeito) {
+                props.onPedidoFeito();
+            }
         }
     }
 
@@ -47,7 +52,7 @@ function PedidoBebidas(props: Props) {
                 </div>
                 <div className={styles.nomepreco}>
                   <h3>{props.produto?.nome}</h3>
-                  <h3>{props.produto?.preco}</h3>
+                  <h3>Preço: {props.produto?.preco}</h3>
                 </div>
             </div>
             <Caixa titulo={"Adicional"}>
