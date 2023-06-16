@@ -141,22 +141,22 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                           {<Lista tipo={'sobremesa'} onSelect={handleProdutoSelecionado}/>}
+                           {<Lista tipo={'sobremesa'} onSelect={handleProdutoSelecionadoSobremesas}/>}
                         </div>
                     </div> 
                 </section>
             </Tela>
             <Modal aberto={modalAberto} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
-                <PedidoHamburguer produto={produtoSelecionado}/>
+                <PedidoHamburguer produto={produtoSelecionado} onPedidoFeito={handleModalClose}/>
             </Modal>
             <Modal aberto={modalAbertoBebidas} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
-                <PedidoBebida produto={produtoSelecionado}/>
+                <PedidoBebida produto={produtoSelecionado} onPedidoFeito={handleModalClose}/>
             </Modal>
             <Modal aberto={modalAbertoPorcoes} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
-                <PedidoPorcoes produto={produtoSelecionado}/>
+                <PedidoPorcoes produto={produtoSelecionado} onPedidoFeito={handleModalClose}/>
             </Modal>
             <Modal aberto={modalAbertoSobremesas} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
-                <PedidoSobreMesa produto={produtoSelecionado}/>
+                <PedidoSobreMesa produto={produtoSelecionado} onPedidoFeito={handleModalClose}/>
             </Modal>
         </>
     );
