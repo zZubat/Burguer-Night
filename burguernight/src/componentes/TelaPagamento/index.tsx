@@ -50,6 +50,7 @@ function Pagamento() {
                                     <h3 className={styles.titulo}>{pedido.produto.nome}</h3>
                                     <h3>Preço: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(pedido.produto.preco)}</h3> 
                                 </div>
+                                <button></button>
                             </div>  
                         )})}
                 </div>  

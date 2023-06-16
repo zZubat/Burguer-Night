@@ -38,6 +38,7 @@ function PedidoHamburguer(props: Props) {
     function handleFazerPedido() {
         if (props.produto) {
             const pedido: Pedido = {
+                id:CarrinhoRepository.contador(),
                 produto: props.produto,
                 tipo: 'hamburguer',
                 adicionais: [],
