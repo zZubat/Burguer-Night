@@ -6,7 +6,7 @@ type Props = {
 
 function BotaoFazerPedido (props: Props) {
     return (
-        <button className={styles.borda} onClick={props.onClick}>
+        <button className={styles.borda} onClick={props.onClick} >
             Fazer Pedido
         </button>
     )

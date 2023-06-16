@@ -1,3 +1,4 @@
+import { count } from "console";
 import Carrinho from "../componentes/models/Carrinho";
 import Pedido from "../componentes/models/Pedido";
 
@@ -11,6 +12,35 @@ const CarrinhoRepository = {
         } else {
             return JSON.parse(pedidosString) as Carrinho;
         }
+    },
+
+    contador: function() {
+        var c= CarrinhoRepository.carregar() as Carrinho
+        var i = '0'
+        c.pedidos?.map(function(item: Pedido){
+            if(item.id > i){
+                i =    item.id;
+            }
+        })
+        return (i+1)
+    },
+
+    delete: function(id: string) {
+        var c, nvc;
+        nvc = {pedidos: [] } as Carrinho
+        c= CarrinhoRepository.carregar() as Carrinho
+        c.pedidos?.map(function(item: Pedido){
+            if (item.id == id ) {
+                console.log(id);
+                localStorage.removeItem(id);
+                console.log('Deletado')
+            }else{
+                CarrinhoRepository.inserirNovoPedido(item);
+            }
+        })
+        return (
+            this.salvar(nvc)
+        )
     },
 
     salvar: function (carrinho: Carrinho) {

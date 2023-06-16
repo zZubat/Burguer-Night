@@ -44,3 +44,11 @@
 .nomepreco{
     margin-left: 20px;
 }
+.delete{
+    display: flex;
+    padding-left: 20px;
+    color: white;
+}
+.delete :hover{
+    color: red;
+}

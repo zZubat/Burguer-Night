@@ -1,6 +1,7 @@
 import Produto from "./Produto";
 
 type Pedido = {
+    id: string; 
     produto: Produto;
     tipo: 'hamburguer' | 'sobremesa' | 'bebida' | 'porcoes';
     opcoes: string[]; // tipo de pão, ponto da carne etc.
