@@ -3,25 +3,49 @@ import styles from "./index.module.css"
 import imgElo from "./imagens/LOGO ELO.png"
 import imgPix from "./imagens/LOGO PIX.png"
 import imgCpf from "./imagens/LOGO DOCUMENTO.png"
+import { text } from "node:stream/consumers";
 
+type Props = {
+    InputMask: string;
+    value: number;
+}
 
 function BoxFormasdePagamento () {
     const [alterarpagamento, setPagamento] = useState(false);
     const [alterardocumento, setDocumento] = useState(false);
 
 
-    function abrir() {
+    function abrirPagamento() {
         setPagamento(true);
     }
-    function fechar() {
-        setPagamento(false);
-    }
-    function open() {
+    function abrirDocumento() {
         setDocumento(true);
     }
-    function close() {
+    function fecharDocumento() {
         setDocumento(false);
     }
+    function fecharPagamento() {
+        setPagamento(false);
+    }
+    
+    function atualizarPagamento() {
+        alert("Forma de pagamento atualizado!")
+        fecharPagamento();
+    }
+    function atualizarDocumento() {
+        alert("CPF/CNPJ atualizado com sucesso!")
+        fecharDocumento();
+    }
+    
+     // function cpf(props: Props) {
+       // return (
+       // <InputMask
+       //     mask='999.999.999-99'
+       //     value={props.value}
+       // //</InputMask>
+       // );
+     // }
+
 
 
     return (
@@ -37,9 +61,9 @@ function BoxFormasdePagamento () {
                         <h3>Dinheiro - Cartão - Pix</h3>
                     </div>
                     {(alterarpagamento) ? (
-                        <button className={styles.botao} onClick={fechar}>Fechar</button>
+                        <button className={styles.botao} onClick={fecharPagamento}>Fechar</button>
                         ) : (
-                        <button className={styles.botao} onClick={abrir}>Alterar</button>
+                        <button className={styles.botao} onClick={abrirPagamento}>Alterar</button>
                     )}
                 </header>
             </div>
@@ -49,22 +73,24 @@ function BoxFormasdePagamento () {
                     <h1>Formas de pagamento</h1>
                     
                     <div  className={styles.comopagar}>
-                        <h3>Cartão de crédito</h3>                  
-                        <button className={styles.botao}>Selecionar</button>
+                        <hgroup>
+                        <h3>Cartão de crédito</h3>
+                        </hgroup>
+                        <button onClick={atualizarPagamento} className={styles.botao}>Selecionar</button>
                     </div>
                     
                     <div className={styles.comopagar}>
                         <hgroup>
-                        <h3>Pix</h3>
+                            <h3>Pix</h3>
                         </hgroup>
-                    <button className={styles.botao}>Selecionar</button>
+                        <button onClick={atualizarPagamento} className={styles.botao}>Selecionar</button>
                     </div>
                     
                     <div className={styles.comopagar}>
                         <hgroup>
                             <h3>Dinheiro</h3>
                         </hgroup>
-                    <button className={styles.botao}>Selecionar</button>
+                        <button onClick={atualizarPagamento} className={styles.botao}>Selecionar</button>
                     </div>
                     
                 </div>
@@ -77,27 +103,31 @@ function BoxFormasdePagamento () {
                     <header className={styles.documento}>
                         <div className={styles.boxAddcpf}>
                             <h1 >CPF/CNPJ na nota</h1>
-                            <textarea className={styles.textarea}>Digite um documento válido</textarea>
+                            <input type='text' className={styles.textarea} placeholder="Digite um documento válido!"
+                                maxLength={14}/>
                         </div>
-                                    {(alterardocumento) ? (
-                            <button className={styles.botao} onClick={close}>Fechar</button>
+                        <button className={styles.botao}>Confirmar</button>
+                             {(alterardocumento) ? (
+                            <button className={styles.botao} onClick={fecharDocumento}>Fechar</button>
                             ) : (
-                            <button className={styles.botao} onClick={open}>Alterar</button>
-                        )}
+                            
+                            <button className={styles.botao} onClick={abrirDocumento}>Alterar</button>
+                        )} 
                     </header>
                 </div>
             </div>
-                
+            
                 {(alterardocumento) && (
                 <div className={styles.boxCPF}>
                     <hgroup>
                         <h1>CPF/CNPJ</h1>
-                        <textarea className={styles.textarea}>Insira um CPF/CNPJ válido</textarea>
+                        <input className={styles.textarea} placeholder="Insira um CPF/CNPJ válido"
+                             maxLength={14}/>
                     </hgroup>
-                    <button className={styles.botao}>Confirmar</button>
+                    <button onClick={atualizarDocumento} className={styles.botao}>Confirmar</button>
                 </div>
             )}
-            
+
             <button className={styles.botaofinalizar}>Finalizar Pagamento</button>
         </div>
     )
