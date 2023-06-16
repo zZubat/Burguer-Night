@@ -49,7 +49,8 @@ function BoxFormasdePagamento () {
                     <h1>Formas de pagamento</h1>
                     
                     <div  className={styles.comopagar}>
-                        <h3>Cartão de crédito</h3>                   <button className={styles.botao}>Selecionar</button>
+                        <h3>Cartão de crédito</h3>                  
+                        <button className={styles.botao}>Selecionar</button>
                     </div>
                     
                     <div className={styles.comopagar}>

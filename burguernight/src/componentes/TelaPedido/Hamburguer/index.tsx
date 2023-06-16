@@ -49,9 +49,11 @@ function PedidoHamburguer(props: Props) {
                 observacao,
             }
             CarrinhoRepository.inserirNovoPedido(pedido);
+            console.log("Pedido Feito")
             if (props.onPedidoFeito) {
                 props.onPedidoFeito();
             }
+            console.log(props.produto)
         }
     }
 

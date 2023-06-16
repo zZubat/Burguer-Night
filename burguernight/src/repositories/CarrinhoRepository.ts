@@ -16,30 +16,31 @@ const CarrinhoRepository = {
 
     contador: function() {
         var c= CarrinhoRepository.carregar() as Carrinho
-        var i = 0
+        var i = '0'
         c.pedidos?.map(function(item: Pedido){
             if(item.id > i){
                 i =    item.id;
             }
-            
         })
         return (i+1)
     },
 
-    delete: function(id: Number) {
+    delete: function(id: string) {
         var c, nvc;
         nvc = {pedidos: [] } as Carrinho
         c= CarrinhoRepository.carregar() as Carrinho
         c.pedidos?.map(function(item: Pedido){
-            if (item.id == id) {
+            if (item.id == id ) {
+                console.log(id);
+                localStorage.removeItem(id);
                 console.log('Deletado')
-                console.log(item)
             }else{
                 CarrinhoRepository.inserirNovoPedido(item);
             }
         })
-
-        this.salvar(nvc)
+        return (
+            this.salvar(nvc)
+        )
     },
 
     salvar: function (carrinho: Carrinho) {

@@ -1,4 +1,4 @@
-import { CaretLeft } from '@phosphor-icons/react';
+import { CaretLeft, X } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 import Tela from '../Tela'
 import styles from './index.module.css'
@@ -8,12 +8,15 @@ import BoxFormasdePagamento from '../Adicionais/BoxFormasdePagamento/BoxFormasde
 import FotoLanche from '../../Aseets/HamburguerAus.jpg';
 import Pedido from '../models/Pedido';
 import Carrinho from "../models/Carrinho";
-import { useState , useEffect} from 'react';
+import { useState , useEffect, MouseEventHandler} from 'react';
 import CarrinhoRepository from '../../repositories/CarrinhoRepository';
 
 function Pagamento() {
     const [pedidos, setPedidos] = useState<Pedido[]>();
     const [start, setStart] = useState(0);
+    const [state, setState] = useState(null);
+    
+   
 
     useEffect(() => {
         if(!start){
@@ -23,6 +26,20 @@ function Pagamento() {
             setStart(1);
         }
       });
+
+      const deletarItem: MouseEventHandler<SVGSVGElement> = (event) => {
+        const id = event.currentTarget.id; // Obtém o ID do elemento SVG atual
+       CarrinhoRepository.delete(id);
+       if(!CarrinhoRepository.delete != null){
+
+       }
+       
+       
+      };
+
+
+      
+      
 
     return (
             <Tela  barraTopo={
@@ -50,7 +67,7 @@ function Pagamento() {
                                     <h3 className={styles.titulo}>{pedido.produto.nome}</h3>
                                     <h3>Preço: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(pedido.produto.preco)}</h3> 
                                 </div>
-                                <button></button>
+                                <a className={styles.delete}><X  size={25} onClick={deletarItem}/></a>
                             </div>  
                         )})}
                 </div>  

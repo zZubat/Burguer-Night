@@ -20,6 +20,7 @@ function PedidoPorcoes (props: Props) {
     function handleFazerPedido() {
         if (props.produto) {
             const pedido: Pedido = {
+                id:CarrinhoRepository.contador(),
                 produto: props.produto,
                 tipo: 'porcoes',
                 adicionais: [],
@@ -27,9 +28,11 @@ function PedidoPorcoes (props: Props) {
                 observacao,
             }
             CarrinhoRepository.inserirNovoPedido(pedido);
+            console.log("Pedido Feito")
             if (props.onPedidoFeito) {
                 props.onPedidoFeito();
             }
+            console.log(props.produto)
         }
     }
     

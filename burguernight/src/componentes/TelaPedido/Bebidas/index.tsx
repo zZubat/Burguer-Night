@@ -29,6 +29,7 @@ function PedidoBebidas(props: Props) {
     function handleFazerPedido() {
         if (props.produto) {
             const pedido: Pedido = {
+                id:CarrinhoRepository.contador(),
                 produto: props.produto,
                 tipo: 'bebida',
                 adicionais: [
