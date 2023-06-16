@@ -1,8 +1,7 @@
-.imagemdefundo{ 
-    background-image: url('../../Aseets/backgroundConfirmarPedido.png');
-    background-attachment: fixed;
+.texttopo {
+    color: white;
+    margin-top: 10px;
 }
-
 .topo {
     display: flex;
     flex-direction: row;
@@ -15,11 +14,7 @@
     padding-top: 20px;
     width: 70px;
 }
-.texttopo {
-    color: white;
-    margin-top: 10px;
-}
-.cardpedidos{
+.pedidos{
     margin-bottom: 50px;
 }
 .cardpedido{
@@ -38,20 +33,7 @@
 .titulo{
     width: 130px;
 }
-.cardpedido1{
-    display: flex;
-    flex-direction: row;
-    background: linear-gradient(#43341bc8, rgb(27, 19, 4));
-    background-color: rgba(0, 0, 0, 0.776);
-    color: white;
-    width: 350px;
-    height: 140px;
-    padding-top: 10px;
-
-    border-radius: 7%;
-    margin-bottom: 15px;
-}
-.FotoLanche1{
+.FotoLanche{
     display: flex;
     flex-direction: column;
     margin-left: 5px;
@@ -59,32 +41,6 @@
     height: 130px;
     border-radius: 10px;
 }
-.nomepreco1{
-    margin-left: 30px;
-    padding: 2px;
-}
-.cardpedido2{
-    display: flex;
-    flex-direction: row;
-    background: linear-gradient(#43341bc8, rgb(27, 19, 4));
-    background-color: rgba(0, 0, 0, 0.776);
-    color: white;
-    width: 350px;
-    height: 150px;
-    padding-top: 10px;
-
-    border-radius: 7%;
-    margin-bottom: 15px;
-}
-.FotoLanche2{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-    width: 150px;
-    height: 140px;
-    border-radius: 10px;
-}
-.nomepreco2{
-    margin-left: 30px;
-    padding: 2px;
+.nomepreco{
+    margin-left: 20px;
 }
