@@ -12,6 +12,10 @@ function BoxCupom () {
     function fechar() {
         setAberto(false);
     }
+    function adicionarCupom() {
+        alert("Cupom Adicionado!");
+        fechar();
+    }
 
     return (
         <div className={styles.boxcupons}>
@@ -34,14 +38,14 @@ function BoxCupom () {
                             <h3>Cupom "PIX"</h3>
                             <h5 className={styles.h5}>Desconto de até 5% para pagamentos em Pix</h5>
                         </hgroup>
-                        <button className={styles.botao}>Selecionar</button>
+                        <button onClick={adicionarCupom} className={styles.botao} >Selecionar</button>
                     </div>
                     <div className={styles.boxPix}>
                         <hgroup>
                             <h3>Cupom "10"</h3>
                             <h5 className={styles.h5}>Desconto de 10% em pagamentos acima de R$50 </h5>
                         </hgroup>
-                        <button className={styles.botao}>Selecionar</button>
+                        <button onClick={adicionarCupom} className={styles.botao}>Selecionar</button>
                     </div>
                 </div>
             )}
