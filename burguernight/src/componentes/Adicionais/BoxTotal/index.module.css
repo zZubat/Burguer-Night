@@ -27,3 +27,7 @@
     opacity: 1;
 }
 
+.botao {
+    background-color: transparent;
+    color: red;
+}

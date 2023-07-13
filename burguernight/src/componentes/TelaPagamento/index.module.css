@@ -52,3 +52,11 @@
 .delete :hover{
     color: red;
 }
+.botao {
+    background-color: red;
+    color: white;
+    width: 250px;
+    margin-top: 40px;
+    border-radius: 13px;
+    padding: 1em;
+}
