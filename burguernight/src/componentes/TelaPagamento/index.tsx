@@ -2,9 +2,7 @@ import { CaretLeft, X } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 import Tela from '../Tela'
 import styles from './index.module.css'
-import BoxCupons from '../Adicionais/BoxCupom/BoxCupom';
 import BoxTotal from '../Adicionais/BoxTotal/BoxTotal';
-import BoxFormasdePagamento from '../Adicionais/BoxFormasdePagamento/BoxFormasdePagamento';
 import FotoLanche from '../../Aseets/HamburguerAus.jpg';
 import Pedido from '../models/Pedido';
 import Carrinho from "../models/Carrinho";
@@ -72,10 +70,9 @@ function Pagamento() {
                         )})}
                 </div>  
                 <div>
-                    <BoxCupons/>
-                    <BoxTotal subtotal={100} desconto={60} total={40}/>
-                    <BoxFormasdePagamento/>  
+                    <BoxTotal total={40}/>
                 </div>
+                <button className={styles.botao}>Confirmar Pedido</button> 
             </Tela>
     )
 }
