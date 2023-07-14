@@ -37,7 +37,7 @@ function TelaPrincipal() {
     }, []);
 
     type ListaProps = {
-        tipo: string;
+        categoria: string;
         onSelect?(produto: Produto): void;
     }
 
@@ -46,7 +46,7 @@ function TelaPrincipal() {
             <>
             {
                 produto.filter(function (prato) {
-                    return prato.tipo === props.tipo;
+                    return prato.categoria === props.categoria;
                 }).map(function (produto) {
                     
                     function onClick() {
@@ -60,7 +60,7 @@ function TelaPrincipal() {
                         key={produto.id}
                         nome={produto.nome}
                         ingredientes={produto.ingredientes}
-                        descricao={produto.descricao}
+                        descricao={produto.adicionais}
                         preco={produto.preco}
                         onClick={onClick}/>
                     );
@@ -105,7 +105,7 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                            {<Lista tipo={'burguer'} onSelect={handleProdutoSelecionado} />}
+                            {<Lista categoria={'burguer'} onSelect={handleProdutoSelecionado} />}
                         </div>
                     </div>
                 </section>
@@ -117,7 +117,7 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                            {<Lista tipo={'bebida'} onSelect={handleProdutoSelecionadoBebidas}/>}
+                            {<Lista categoria={'bebida'} onSelect={handleProdutoSelecionadoBebidas}/>}
                         </div>
                     </div>
                 </section>
@@ -129,7 +129,7 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                            {<Lista tipo={'porcao'} onSelect={handleProdutoSelecionadoPorcoes}/>}
+                            {<Lista categoria={'porcao'} onSelect={handleProdutoSelecionadoPorcoes}/>}
                         </div>
                     </div>            
                 </section>
@@ -141,7 +141,7 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                           {<Lista tipo={'sobremesa'} onSelect={handleProdutoSelecionadoSobremesas}/>}
+                           {<Lista categoria={'sobremesa'} onSelect={handleProdutoSelecionadoSobremesas}/>}
                         </div>
                     </div> 
                 </section>

@@ -50,7 +50,7 @@ function PedidoPorcoes (props: Props) {
                 </div>
                     <Caixa titulo={"Ingredientes"}>
                         <ul>
-                            <li>{props.produto?.descricao}</li>
+                            <li>{props.produto?.adicionais}</li>
                         </ul>
                     </Caixa>
                     <TextBox onChange={setObservacao}/>

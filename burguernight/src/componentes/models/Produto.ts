@@ -2,9 +2,9 @@ type Produto = {
     id?: number;
     nome: string;
     ingredientes?: string;
-    descricao: string;
+    adicionais: string;
     preco: number;
-    tipo: 'burguer' | 'bebida' | 'porcao' | 'sobremesa';
+    categoria: 'burguer' | 'bebida' | 'porcao' | 'sobremesa';
 }
 
 

@@ -77,7 +77,7 @@ function PedidoHamburguer(props: Props) {
                 </Caixa>
                 <Caixa titulo={"Ingredientes"}> 
                 <ul>
-                    <li>{props.produto?.descricao}</li>
+                    <li>{props.produto?.adicionais}</li>
                 </ul>
                 </Caixa>
             </div>

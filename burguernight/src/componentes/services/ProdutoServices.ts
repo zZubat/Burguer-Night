@@ -1,18 +1,30 @@
+import axios from "axios";
+import { resolve } from "path";
 import Produto from "../models/Produto";
+import api from "./api";
 
 const BurguerService = {
-    getTodos: function () {
+    getTodos: async function () {
         return new Promise<Produto[]>(function (resolve, reject) {
-            setTimeout(function () {
-                resolve(mock);
-            }, 3000);
+            api.get("/produtos")
+            .then(function (response) {
+                if(response.status == 201){
+                    resolve(response.data)
+                }
+                else{
+                    reject("não foi possivel carregar os produtos")
+                }
+            })
+            .catch(function (erro) {
+                reject(erro);
+            });
         });
     },
 }
 
 export default BurguerService;
 
-const mock: Produto[] = [
+{/*const mock: Produto[] = [
     {
         id: 1,
         nome: 'X-Salada',
@@ -77,4 +89,4 @@ const mock: Produto[] = [
         preco: 45,
         tipo:'sobremesa'
     },
-];
+]; */}
