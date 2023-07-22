@@ -1,5 +1,4 @@
 import styles from './index.module.css'
-import FotoLanche from '../../../Aseets/HamburguerAus.jpg';
 import Caixa from '../../Adicionais/Caixa/Caixa';
 import GrupoDeRadio from '../../Adicionais/GrupoDeRadio/GrupoDeRadio';
 import BotaoFazerPedido from '../../Adicionais/BotaoFazerPedido/BotaoFazerPedido';
@@ -61,7 +60,7 @@ function PedidoHamburguer(props: Props) {
         <div>
             <div className={styles.card}>
                 <div>
-                    <img className={styles.FotoLanche} src={FotoLanche} />
+                    <img className={styles.FotoLanche} src='Burguer-Night\burguernight\src\Aseets\hamburguerImage.jpg' />
                 </div>
                 <div className={styles.nomepreco}>
                     <h3>{props.produto?.nome}</h3>
@@ -77,7 +76,7 @@ function PedidoHamburguer(props: Props) {
                 </Caixa>
                 <Caixa titulo={"Ingredientes"}> 
                 <ul>
-                    <li>{props.produto?.adicionais}</li>
+                    <li>{props.produto?.ingredientes}</li>
                 </ul>
                 </Caixa>
             </div>

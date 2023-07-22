@@ -1,5 +1,3 @@
-import axios from "axios";
-import { resolve } from "path";
 import Produto from "../models/Produto";
 import api from "./api";
 
@@ -9,6 +7,7 @@ const BurguerService = {
             api.get("/produtos")
             .then(function (response) {
                 if(response.status == 201){
+                    console.log(response.data)
                     resolve(response.data)
                 }
                 else{

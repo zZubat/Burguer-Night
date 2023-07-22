@@ -17,7 +17,7 @@ import styles from '../TelaPrincipal/index.module.css'
 function TelaPrincipal() {
 
     const [carregando, setCarregando] = useState(true);
-    const [produto, setProduto] = useState<Produto[]>([]);
+    const [produtos, setProdutos] = useState<Produto[]>([]);
     const [modalAberto, setModalAberto] = useState(false);
     const [modalAbertoBebidas, setModalAbertoBebidas] = useState(false);
     const [modalAbertoPorcoes, setModalAbertoPorcoes] = useState(false);
@@ -28,8 +28,8 @@ function TelaPrincipal() {
         //TODO: Consegue o array do servidor.
         setCarregando(true);
         ProdutoService.getTodos()
-        .then(function (produto) {
-            setProduto(produto);
+        .then(function (produtos) {
+            setProdutos(produtos);
         })
         .finally(function () {
             setCarregando(false);
@@ -42,10 +42,20 @@ function TelaPrincipal() {
     }
 
     function Lista(props: ListaProps){
+
+        let fotoUrl = '';
+        switch (props.categoria) {
+            case 'Burguer': fotoUrl = '/imagens/hamburguerImage.jpg'; break;
+            case 'Bebidas': fotoUrl = '/imagens/hamburguerImage.jpg'; break;
+            case 'Porções': fotoUrl = '/imagens/porcoesImage.jpg'; break;
+            case 'Sobremesa': fotoUrl = '/imagens/sobremesasImage.jpg'; break;
+            default: fotoUrl = '/imagens/naosei.jpg'; break;
+        }
+
         return(
             <>
             {
-                produto.filter(function (prato) {
+                produtos.filter(function (prato) {
                     return prato.categoria === props.categoria;
                 }).map(function (produto) {
                     
@@ -58,6 +68,7 @@ function TelaPrincipal() {
                     return(
                         <BoxProduto 
                         key={produto.id}
+                        fotoUrl={fotoUrl}
                         nome={produto.nome}
                         ingredientes={produto.ingredientes}
                         descricao={produto.adicionais}
@@ -105,7 +116,7 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                            {<Lista categoria={'burguer'} onSelect={handleProdutoSelecionado} />}
+                            {<Lista categoria={'Burguer'} onSelect={handleProdutoSelecionado} />}
                         </div>
                     </div>
                 </section>
@@ -117,7 +128,7 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                            {<Lista categoria={'bebida'} onSelect={handleProdutoSelecionadoBebidas}/>}
+                            {<Lista categoria={'Bebidas'} onSelect={handleProdutoSelecionadoBebidas}/>}
                         </div>
                     </div>
                 </section>
@@ -129,7 +140,7 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                            {<Lista categoria={'porcao'} onSelect={handleProdutoSelecionadoPorcoes}/>}
+                            {<Lista categoria={'Porções'} onSelect={handleProdutoSelecionadoPorcoes}/>}
                         </div>
                     </div>            
                 </section>
@@ -141,7 +152,7 @@ function TelaPrincipal() {
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                           {<Lista categoria={'sobremesa'} onSelect={handleProdutoSelecionadoSobremesas}/>}
+                           {<Lista categoria={'Sobremesa'} onSelect={handleProdutoSelecionadoSobremesas}/>}
                         </div>
                     </div> 
                 </section>
