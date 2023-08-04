@@ -4,11 +4,23 @@ import api from "./api";
 const BurguerService = {
     getTodos: async function () {
         return new Promise<Produto[]>(function (resolve, reject) {
-            api.get("/produtos")
+            api.get<Produto[]>("/produtos")
             .then(function (response) {
                 if(response.status == 201){
                     console.log(response.data)
-                    resolve(response.data)
+                    const produtos = response.data;
+                    resolve(produtos.map(function (produto) {
+                        let fotoUrl = '';
+                        switch (produto.categoria) {
+                            case 'Burguer': fotoUrl = '/imagens/hamburguerImage.jpg'; break;
+                            case 'Bebidas': fotoUrl = '/imagens/bebidasImage.jpg'; break;
+                            case 'Porções': fotoUrl = '/imagens/porcoesImage.jpg'; break;
+                            case 'Sobremesa': fotoUrl = '/imagens/sobremesasImage.jpg'; break;
+                            default: fotoUrl = '/imagens/naosei.jpg'; break;
+                        }
+                        produto.fotoUrl = fotoUrl;
+                        return produto;
+                    }))
                 }
                 else{
                     reject("não foi possivel carregar os produtos")

@@ -1,6 +1,7 @@
 import Pedido from "./Pedido"
 
 type Carrinho = {
+    id?: number;
     pedidos: Pedido[];
 }
 

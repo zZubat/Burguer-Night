@@ -8,36 +8,43 @@ import Pedido from '../models/Pedido';
 import Carrinho from "../models/Carrinho";
 import { useState , useEffect, MouseEventHandler} from 'react';
 import CarrinhoRepository from '../../repositories/CarrinhoRepository';
+import api from "../services/api";
 
 function Pagamento() {
     const [pedidos, setPedidos] = useState<Pedido[]>();
-    const [start, setStart] = useState(0);
-    const [state, setState] = useState(null);
     
-   
+    let carrinho: Carrinho;
 
     useEffect(() => {
-        if(!start){
-            var c;
-            c= CarrinhoRepository.carregar() as Carrinho
-            setPedidos(c.pedidos);
-            setStart(1);
-        }
-      });
+        recarregarPedidos();
+    }, []);
 
-      const deletarItem: MouseEventHandler<SVGSVGElement> = (event) => {
-        const id = event.currentTarget.id; // Obtém o ID do elemento SVG atual
-       CarrinhoRepository.delete(id);
-       if(!CarrinhoRepository.delete != null){
+    const deletarItem = (pedido: Pedido) => {
+        CarrinhoRepository.delete(pedido.id);
+        recarregarPedidos();
+    };
 
-       }
-       
-       
-      };
+    function recarregarPedidos() {
+         carrinho = CarrinhoRepository.carregar();
+        setPedidos(carrinho.pedidos);
+    }
 
-
-      
-      
+    function finalizarPagamento () {
+        const carrinho_id = 1; //TODO: Conseguir o id dos dados salvos no Local Storage do carrinho
+        const mesa_id = 1;
+                    
+        api.post(`http://127.0.0.1:3333/carrinho/${carrinho_id}`, {
+            pedidos,
+            mesa_id
+        })
+        .then(function (response) {
+            setPedidos(response.data);
+            alert('Pedido feito com sucesso')
+        })
+        .catch(function (error) {
+            alert(error);
+        })
+    }
 
     return (
             <Tela  barraTopo={
@@ -48,7 +55,7 @@ function Pagamento() {
                         </a>
                     </Link>
                     <div>
-                        <h3 className={styles.texttopo}>FINALIZAR PAGAMENTO</h3>
+                        <h3 className={styles.texttopo}>FINALIZAR PEDIDO</h3>
                     </div>
                 </div>
             }>
@@ -65,15 +72,15 @@ function Pagamento() {
                                     <h3 className={styles.titulo}>{pedido.produto.nome}</h3>
                                     <h3>Preço: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(pedido.produto.preco)}</h3> 
                                 </div>
-                                <a className={styles.delete}><X  size={25} onClick={deletarItem}/></a>
+                                <a className={styles.delete}><X  size={25} onClick={() => deletarItem(pedido)}/></a>
                             </div>  
                         )})}
                 </div>  
                 <div>
-                    <BoxTotal total={40}/>
+                    <BoxTotal pedidos={pedidos}/>
                 </div>
-                <button className={styles.botao}>Confirmar Pedido</button> 
-            </Tela>
+                <button className={styles.botao} onClick={finalizarPagamento}>Confirmar Pedido</button> 
+            </Tela>   
     )
 }
 

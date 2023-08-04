@@ -5,6 +5,7 @@ type Produto = {
     adicionais: string;
     preco: number;
     categoria: 'Burguer' | 'Bebidas' | 'Porções' | 'Sobremesa';
+    fotoUrl: string;
 }
 
 

@@ -25,22 +25,16 @@ const CarrinhoRepository = {
         return (i+1)
     },
 
-    delete: function(id: string) {
-        var c, nvc;
-        nvc = {pedidos: [] } as Carrinho
-        c= CarrinhoRepository.carregar() as Carrinho
-        c.pedidos?.map(function(item: Pedido){
-            if (item.id == id ) {
-                console.log(id);
-                localStorage.removeItem(id);
-                console.log('Deletado')
-            }else{
-                CarrinhoRepository.inserirNovoPedido(item);
+    delete: function(pedidoId: string) {
+        const novoCarrinho: Carrinho = { pedidos: [] };
+        const carrinho: Carrinho = CarrinhoRepository.carregar();
+        
+        carrinho.pedidos.forEach(function (pedido) {
+            if (pedido.id !== pedidoId) {
+                novoCarrinho.pedidos.push(pedido);
             }
         })
-        return (
-            this.salvar(nvc)
-        )
+        CarrinhoRepository.salvar(novoCarrinho);
     },
 
     salvar: function (carrinho: Carrinho) {

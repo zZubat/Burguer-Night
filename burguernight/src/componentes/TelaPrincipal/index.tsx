@@ -43,15 +43,6 @@ function TelaPrincipal() {
 
     function Lista(props: ListaProps){
 
-        let fotoUrl = '';
-        switch (props.categoria) {
-            case 'Burguer': fotoUrl = '/imagens/hamburguerImage.jpg'; break;
-            case 'Bebidas': fotoUrl = '/imagens/hamburguerImage.jpg'; break;
-            case 'Porções': fotoUrl = '/imagens/porcoesImage.jpg'; break;
-            case 'Sobremesa': fotoUrl = '/imagens/sobremesasImage.jpg'; break;
-            default: fotoUrl = '/imagens/naosei.jpg'; break;
-        }
-
         return(
             <>
             {
@@ -68,7 +59,7 @@ function TelaPrincipal() {
                     return(
                         <BoxProduto 
                         key={produto.id}
-                        fotoUrl={fotoUrl}
+                        fotoUrl={produto.fotoUrl}
                         nome={produto.nome}
                         ingredientes={produto.ingredientes}
                         descricao={produto.adicionais}
@@ -147,15 +138,17 @@ function TelaPrincipal() {
 
                 <section id="Sobremesas">
                 <div className={styles.caixa}>
-                        <h3>Sobremesas</h3>
+                <h3>Sobremesas</h3>
                         <div className={styles.conteudo}>
                             {(carregando === true) && (
                             <p>Carregando...</p>
                             )}
-                           {<Lista categoria={'Sobremesa'} onSelect={handleProdutoSelecionadoSobremesas}/>}
+                            
+                           {<Lista categoria={'Sobremesa'} onSelect={handleProdutoSelecionadoSobremesas}/> }
                         </div>
                     </div> 
                 </section>
+
             </Tela>
             <Modal aberto={modalAberto} titulo={produtoSelecionado?.nome ?? ''} onClose={handleModalClose}>
                 <PedidoHamburguer produto={produtoSelecionado} onPedidoFeito={handleModalClose}/>

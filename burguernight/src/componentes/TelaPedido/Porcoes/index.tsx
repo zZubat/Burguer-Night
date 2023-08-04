@@ -22,7 +22,7 @@ function PedidoPorcoes (props: Props) {
             const pedido: Pedido = {
                 id:CarrinhoRepository.contador(),
                 produto: props.produto,
-                tipo: 'porcoes',
+                categoria: 'porcoes',
                 adicionais: [],
                 opcoes: [],
                 observacao,
@@ -40,17 +40,17 @@ function PedidoPorcoes (props: Props) {
         <div>
             <div className={styles.card}>
                 <div>
-                    <img className={styles.FotoPorcoes} src={FotoPorcoes} />
+                    <img className={styles.FotoPorcoes} src={props.produto?.fotoUrl} />
                 </div>
                 <div className={styles.nomepreco}>
                     <h3>Especial</h3>   
                     <h3>{props.produto?.nome}</h3>
-                    <h3>Preço: {props.produto?.preco}</h3> 
+                    <h3>Preço: R$ {props.produto?.preco},00</h3> 
                 </div>
                 </div>
                     <Caixa titulo={"Ingredientes"}>
                         <ul>
-                            <li>{props.produto?.adicionais}</li>
+                            <li>{props.produto?.ingredientes}</li>
                         </ul>
                     </Caixa>
                     <TextBox onChange={setObservacao}/>
